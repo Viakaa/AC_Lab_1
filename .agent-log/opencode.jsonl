@@ -1,0 +1,3 @@
+{"ts":"2026-10-10T16:55:52.574Z","tool":"read","input":{"filePath":"C:\\Users\\viket\\AC_Lab_1\\package.json"},"result":"ok","session":"ses_ed9420954ffeFC5yIJbX89koL4","source":"opencode"}
+{"ts":"2026-10-10T16:55:58.572Z","tool":"bash","input":{"command":"npm test"},"result":"ok","session":"ses_ed9420954ffeFC5yIJbX89koL4","source":"opencode"}
+{"ts":"2026-10-10T17:05:07.724Z","tool":"bash","input":{"command":"npm run неіснуючий-скрипт"},"result":"ok","session":"ses_ed9420954ffeFC5yIJbX89koL4","source":"opencode"}

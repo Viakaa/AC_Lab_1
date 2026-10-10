@@ -1,0 +1,3 @@
+{"ts":"2026-10-10T16:55:50.306Z","tool":"view","input":{"path":"C:\\Users\\viket\\AC_Lab_1\\package.json"},"result":"ok","session":"e8e40b36-f7ea-40bd-b596-12e991fa9d0e","source":"copilot"}
+{"ts":"2026-10-10T16:56:04.070Z","tool":"powershell","input":{"command":"npm test"},"result":"ok","session":"e8e40b36-f7ea-40bd-b596-12e991fa9d0e","source":"copilot"}
+{"ts":"2026-10-10T16:59:27.409Z","tool":"powershell","input":{"command":"npm run неіснуючий-скрипт"},"result":"ok","session":"e8e40b36-f7ea-40bd-b596-12e991fa9d0e","source":"copilot"}
