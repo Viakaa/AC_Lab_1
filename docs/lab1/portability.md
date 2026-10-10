@@ -1,0 +1,1 @@
+Copilot: postToolUse спрацював на npm run неіснуючий-скрипт з ненульовим кодом виходу, result = ok; postToolUseFailure не спрацював. OpenCode: result завжди ok
