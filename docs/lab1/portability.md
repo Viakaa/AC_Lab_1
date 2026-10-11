@@ -11,4 +11,4 @@
 | Заборона (pre-hook) | Потрібна адаптація: плагін `.opencode/plugins/guard-env.js` (подія `tool.execute.before`, блокує виклик і кидає throw) + маски дозволів у `opencode.json` | Потрібна адаптація: `.github/hooks/guard-env.json` + `scripts/guard-env.mjs` (подія `preToolUse`, код виходу 2, повертає `permissionDecision: "deny"`) |
 | Журнал відмов | Плагін сам записує рядок `"result":"denied"` у `.agent-log/opencode.jsonl` до блокування операції | Скрипт хука сам записує рядок `"result":"denied"` у `.agent-log/copilot.jsonl` до блокування операції |
 | Підключення MCP | Секція `"mcp"` у проєктному `opencode.json` (віддалений URL без ключів) | Користувацький конфіг `~/.copilot/mcp-config.json` або інтерактивно `/mcp add` (без ключів у файлах репозиторію) |
-| Скріншот-тест | крок 06 | крок 06 |
+| Скріншот-тест | Працює без змін. Тест Playwright (`tests/health-link.spec.ts`) не залежить від агента, виконується однаково у локальному оточенні та в CI | Працює без змін. Тест Playwright (`tests/health-link.spec.ts`) не залежить від агента, виконується однаково у локальному оточенні та в CI |
