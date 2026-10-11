@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "hooks": {
+    "preToolUse": [
+      {
+        "type": "command",
+        "powershell": "node scripts/guard-env.mjs",
+        "bash": "node scripts/guard-env.mjs",
+        "command": "node scripts/guard-env.mjs",
+        "timeoutSec": 10
+      }
+    ]
+  }
+}

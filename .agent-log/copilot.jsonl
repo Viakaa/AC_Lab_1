@@ -24,3 +24,10 @@
 {"ts":"2026-10-11T18:28:43.109Z","tool":"rg","input":{"pattern":"eslint|lint"},"result":"ok","session":"c8ba4220-bbc7-458f-9a38-ded62b849be7","source":"copilot"}
 {"ts":"2026-10-11T18:28:43.499Z","tool":"glob","input":{"pattern":"{package.json,package-lock.json,*eslint*,.eslintrc*,eslint.config.*,**/.eslintrc*,**/eslint.config.*}"},"result":"ok","session":"c8ba4220-bbc7-458f-9a38-ded62b849be7","source":"copilot"}
 {"ts":"2026-10-11T18:28:43.883Z","tool":"powershell","input":{"command":"git status --short"},"result":"ok","session":"c8ba4220-bbc7-458f-9a38-ded62b849be7","source":"copilot"}
+{"ts":"2026-10-11T19:18:30.451Z","tool":"powershell","input":{"command":"echo TEST_KEY=*** >> .env"},"result":"denied","session":"test-check","source":"copilot"}
+{"ts":"2026-10-11T19:27:28.148Z","tool":"powershell","input":{"command":"echo TEST_KEY=1 >> .env"},"result":"ok","session":"9322ece3-7b9c-4bbf-99d1-c2cb640b60ac","source":"copilot"}
+{"ts":"2026-10-11T19:29:24.894Z","tool":"powershell","input":{"command":"echo TEST_KEY=*** >> .env"},"result":"denied","session":"18606df9-4560-4436-a6b3-0e5196b04705","source":"copilot"}
+{"ts":"2026-10-11T19:29:28.218Z","tool":"ask_user","input":{"command":"{\"sessionId\":\"18606df9-4560-4436-a6b3-0e5196b04705\",\"timestamp\":1791746967888,\"cwd\":\"C:\\\\Users\\\\viket\\\\AC_Lab_1\",\"toolName\":\"ask_user\",\"toolArgs\":{\"message\":\"Команду заблокував hook для `.env`. За пра"},"result":"denied","session":"18606df9-4560-4436-a6b3-0e5196b04705","source":"copilot"}
+{"ts":"2026-10-11T19:33:13.232Z","tool":"web_fetch","input":{"url":"https://nextjs.org/docs/app/building-your-application/routing/route-handlers"},"result":"ok","session":"7f7c1c00-7e60-408a-950b-e1e2a696d248","source":"copilot"}
+{"ts":"2026-10-11T19:36:13.183Z","tool":"context7-resolve-library-id","input":{},"result":"ok","session":"2dfeb317-e7ad-430a-a605-f7c8b1e10b37","source":"copilot"}
+{"ts":"2026-10-11T19:36:19.927Z","tool":"context7-query-docs","input":{},"result":"ok","session":"2dfeb317-e7ad-430a-a605-f7c8b1e10b37","source":"copilot"}

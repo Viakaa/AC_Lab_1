@@ -1,8 +1,19 @@
-   {
-     "$schema": "https://opencode.ai/config.json",
-     "agent": {
-       "plan": {
-         "permission": { "edit": "deny" }
-       }
-     }
-   }
+{
+  "$schema": "https://opencode.ai/config.json",
+  "permission": {
+    "read": {
+      ".env.example": "allow",
+      ".env*": "deny"
+    },
+    "edit": {
+      ".env*": "deny"
+    }
+  },
+  "mcp": {
+    "context7": {
+      "type": "remote",
+      "url": "https://mcp.context7.com/mcp",
+      "enabled": true
+    }
+  }
+}
