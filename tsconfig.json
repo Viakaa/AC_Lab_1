@@ -44,9 +44,12 @@
     "scripts/**/*.ts",
     "tests/**/*.ts",
     ".next/types/**/*.ts",
-    ".next/dev/types/**/*.ts"
+    ".next/dev/types/**/*.ts",
+     "instrumentation.ts",
+    "instrumentation.node.ts"
   ],
   "exclude": [
     "node_modules"
-  ]
+  ],
+  
 }
