@@ -8,7 +8,7 @@ import { CATALOG } from '@/src/models';
 export const maxDuration = 60; // Hobby: максимум 300 с
 
 const agent = new ToolLoopAgent({
-  model: google('gemini-2.0-flash'), // дешева Flash-модель із безкоштовним рівнем
+  model: google(CATALOG['gemini-3.8-flash'].id),
   instructions: 'Для поточного часу використовуй інструмент getTime.',
   tools: {
     getTime: tool({
