@@ -64,8 +64,17 @@ async function main() {
       model: modelName,
       apiKey,
     });
+   } else if (target === 'openrouter') {
+    // Шлюз OpenRouter (форма Chat Completions) для кроку 11
+    modelName = process.env.OPENROUTER_MODEL ?? 'meta-llama/llama-3.3-70b-instruct:free';
+    const apiKey = process.env.OPENROUTER_API_KEY ?? 'dummy-key';
+    model = createChatAdapter({
+      url: 'https://openrouter.ai/api/v1/chat/completions',
+      model: modelName,
+      apiKey,
+    });
   } else if (target === 'ollama-chat') {
-    modelName = process.env.OLLAMA_MODEL ?? 'qwen3:4b';
+    modelName = process.env.OLLAMA_MODEL ?? 'qwen2.5-coder:1.5b';
     const baseUrl = process.env.OLLAMA_BASE_URL ?? process.env.OLLAMA_HOST ?? 'http://127.0.0.1:11434';
     model = createChatAdapter({
       url: `${baseUrl}/v1/chat/completions`,
