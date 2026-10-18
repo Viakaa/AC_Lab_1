@@ -3,7 +3,7 @@
 - **Студент**: [Бойчук Вікторія]
 - **Репозиторій**: [Viakaa/AC_Lab_1](https://github.com/Viakaa/AC_Lab_1)
 - **Порівнювані інструменти**: **OpenCode** та **GitHub Copilot CLI**
-- **CI Run (e2e job)**: [Посилання на прогін CI](https://github.com/Viakaa/AC_Lab_1/actions/runs/ВАШ_RUN_ID)
+- **CI Run (e2e job)**: [Посилання на прогін CI](https://github.com/Viakaa/AC_Lab_1/actions/runs/38160731529/job/114533057856)
 - **Скріншот сторінки**: [docs/lab1/e2e-home.png](e2e-home.png)
 
 ---
