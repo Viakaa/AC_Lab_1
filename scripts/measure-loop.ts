@@ -5,7 +5,7 @@ import { z } from 'zod';
 import { createChatAdapter, createMessagesAdapter } from '../src/agent/adapters';
 import { runAgentLoop, type Model } from '../src/agent/agent-loop';
 import { createTools, jsonlLogger, type LogEntry } from '../src/agent/tools';
-import { priceUsd } from '../src/cost';
+import { COST_TABLE_HEADER, costTableRow, priceUsd } from '../src/cost';
 import { CATALOG, type ModelSpec } from '../src/models';
 
 const ProposalSchema = z.object({
@@ -27,17 +27,21 @@ const logger = (entry: LogEntry): void => {
   console.log(`  [інструмент] -> ${entry.tool}(${JSON.stringify(entry.input)}) => [${entry.result}]`);
 };
 
-function getSpec(modelId: string): ModelSpec {
-  const allSpecs = Object.values(CATALOG) as ModelSpec[];
-  return (
-    allSpecs.find((m) => m.id === modelId || m.id.includes('gemini') || m.id.includes(modelId)) ??
-    ({
-      id: modelId,
-      provider: 'google',
-      inputPerMTok: 0.15,
-      outputPerMTok: 0.6,
-    } as ModelSpec)
-  );
+// Лише точний збіг id: раніше `includes('gemini')` повертав першу gemini-модель
+// каталогу (gemini-3.5-flash-lite) для будь-якого прогону, і «$ за прайсом» був хибний.
+// Моделі поза каталогом (шлюз :free, локальна Ollama) за прайсом коштують 0.
+function getSpec(modelId: string, target: string): ModelSpec {
+  const allSpecs: readonly ModelSpec[] = Object.values(CATALOG);
+  const found = allSpecs.find((m) => m.id === modelId);
+  if (found) return found;
+  const isLocal = target.startsWith('ollama');
+  return {
+    id: modelId,
+    provider: isLocal ? 'ollama' : 'openai',
+    inputPerMTok: 0,
+    outputPerMTok: 0,
+    pricingUrl: isLocal ? 'https://ollama.com/library' : 'https://openrouter.ai/models',
+  };
 }
 
 async function main() {
@@ -97,7 +101,7 @@ async function main() {
   console.log(`Запуск ${runsCount} прогонів на [${target}] (модель: ${modelName})...\n`);
 
   let validOutputs = 0;
-  const spec = getSpec(modelName);
+  const spec = getSpec(modelName, target);
 
   for (let i = 1; i <= runsCount; i++) {
     const session = `loop-${randomUUID().slice(0, 8)}`;
@@ -122,7 +126,20 @@ async function main() {
     if (res.stop === 'done') validOutputs++;
 
     console.log(
-      `Результат ${i}: зупинка=${res.stop} | кроки=${res.steps} | токени=${res.usage.inputTokens}+${res.usage.outputTokens} | ${Math.round(latencyMs / 1000)}с | $${cost.toFixed(6)}\n`,
+      `Результат ${i}: зупинка=${res.stop} | кроки=${res.steps} | токени=${res.usage.inputTokens}+${res.usage.outputTokens} | ${Math.round(latencyMs)} мс | $${cost.toFixed(6)}`,
+    );
+    // Рядок для docs/lab1/cost.md у форматі курсу: точна затримка в мс і кешовані токени.
+    console.log(
+      `${COST_TABLE_HEADER}\n${costTableRow({
+        run: target,
+        provider: target,
+        model: modelName,
+        usage: res.usage,
+        actualUsd: 0,
+        listUsd: cost,
+        latencyMs,
+        date: new Date().toISOString().slice(0, 10),
+      })}\n`,
     );
 
     if (i === 1 && res.stop === 'done') {
