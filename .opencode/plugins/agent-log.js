@@ -8,7 +8,7 @@ const brief = (tool, args = {}) => {
     return { files: files.map((m) => m[1].trim()) }
   }
   const out = {}
-  for (const key of ["filePath", "command", "pattern", "url", "name"]) {
+  for (const key of ["filePath", "command", "pattern", "url", "name", "subagent_type", "description"]) {
     if (typeof args[key] === "string") out[key] = args[key].slice(0, 200)
   }
   return out
