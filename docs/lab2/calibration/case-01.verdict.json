@@ -1,0 +1,43 @@
+{
+  "judge": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+  "input": "docs/lab2/calibration/case-01.diff",
+  "date": "2026-11-14T16:28:25.848Z",
+  "results": [
+    {
+      "id": "A1",
+      "verdict": "unknown",
+      "reason": "Диф не містить файлу еталонного набору `docs/lab2/golden/queries.jsonl` та скрипта валідації `scripts/validate-golden.ts`, а також не показує результат їхнього запуску.",
+      "evidence": ""
+    },
+    {
+      "id": "A2",
+      "verdict": "unknown",
+      "reason": "У наданому дифі відсутній файл `docs/lab2/baseline.md`, тому неможливо перевірити наявність таблиці вердиктів для кожного запиту.",
+      "evidence": ""
+    },
+    {
+      "id": "A3",
+      "verdict": "unknown",
+      "reason": "Диф додає лише spec.md з визначенням цілей та порогів, але не містить eval-report.md з фактичними результатами для порівняння.",
+      "evidence": ""
+    },
+    {
+      "id": "A4",
+      "verdict": "unknown",
+      "reason": "Диф додає лише специфікацію та журнал автономності, але не містить тесту `tests/retrieval.test.ts` ani коду пошуку, який б гарантував наявність посилань `doc-NN` у відповідях.",
+      "evidence": ""
+    },
+    {
+      "id": "A5",
+      "verdict": "unknown",
+      "reason": "Диф додає лише документацію (spec.md та autonomy-log.md), але не містить жодного коду MCP-сервера, тестів чи package.json, тому неможливо перевірити, чи проходять тести без мережі й ключів.",
+      "evidence": ""
+    },
+    {
+      "id": "A6",
+      "verdict": "unknown",
+      "reason": "Диф додає лише документаційні файли (autonomy-log.md та spec.md), немає жодних змін у CI конфігурації чи доказів статусу job verify в GitHub Actions.",
+      "evidence": ""
+    }
+  ]
+}

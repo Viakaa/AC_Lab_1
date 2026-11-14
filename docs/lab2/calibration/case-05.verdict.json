@@ -1,0 +1,43 @@
+{
+  "judge": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+  "input": "docs/lab2/calibration/case-05.diff",
+  "date": "2026-11-14T16:34:29.496Z",
+  "results": [
+    {
+      "id": "A1",
+      "verdict": "pass",
+      "reason": "У дифі додано eval-set.md, що фіксує 22 запити у золотому наборі, з них 4 з тегом unanswerable та 3 з тегом injection, що відповідає вимогам A1.",
+      "evidence": "docs/lab2/eval-set.md: +| injection | 3 | q-16, q-17, q-18 |\n+| unanswerable | 4 | q-19…q-22 |\n+| **усього** | **22** | 18 з відповіддю в колекції + 4 без неї |"
+    },
+    {
+      "id": "A2",
+      "verdict": "pass",
+      "reason": "Файл `docs/lab2/baseline.md` містить таблицю «Вердикти» з 22 рядками (q-01 … q-22), що відповідає кількості запитів у еталонному наборі (22 запити).",
+      "evidence": "+| id | tags | вердикт | що відповіла модель (коротко) | коментар |\n+|---|---|---|---|---|\n+| q-01 | easy | wrong | 300 seconds (5 minutes) by default | очікувано 30 секунд |\n+| q-02 | easy | correct | 5000 ms (5 seconds) | |\n...\n+| q-22 | unanswerable | wrong | Dockerfile й кроки для Azure DevOps | мала відмовитися |"
+    },
+    {
+      "id": "A3",
+      "verdict": "unknown",
+      "reason": "У дифі відсутній файл eval-report.md та пороги з розділу 3, необхідні для порівняння. Диф містить лише базову лінію без пошуку (baseline.md) та скрипт її збору.",
+      "evidence": ""
+    },
+    {
+      "id": "A4",
+      "verdict": "unknown",
+      "reason": "Диф стосується лише базової лінії без пошуку (скрипт baseline.ts, baseline.md) і не містить реалізації пошуку, тесту retrieval.test.ts чи результатів з цитатами doc-NN.",
+      "evidence": ""
+    },
+    {
+      "id": "A5",
+      "verdict": "unknown",
+      "reason": "Диф не містить жодних файлів тестів, конфігурації npm test, CI або MCP-сервера. Неможливо перевірити, чи проходять тести без мережі й ключів.",
+      "evidence": ""
+    },
+    {
+      "id": "A6",
+      "verdict": "unknown",
+      "reason": "Диф не містить конфігурації GitHub Actions (файлів у .github/workflows/) та не показує статус job verify на гілці main. Це вимагає перевірки CI запуску, якого немає в наданій зміні.",
+      "evidence": ""
+    }
+  ]
+}

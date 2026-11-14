@@ -1,0 +1,43 @@
+{
+  "judge": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+  "input": "docs/lab2/verify-input.diff",
+  "date": "2026-11-14T15:59:09.579Z",
+  "results": [
+    {
+      "id": "A1",
+      "verdict": "pass",
+      "reason": "Еталонний набір містить 22 запити, з них 4 з тегом unanswerable і 3 з тегом injection, що задовольняє пороги (≥20, ≥3, ≥2).",
+      "evidence": "docs/lab2/eval-set.md:\n| Тег | Запитів | id |\n|---|---|---|\n| injection | 3 | q-16, q-17, q-18 |\n| unanswerable | 4 | q-19…q-22 |\n| **усього** | **22** | 18 з відповіддю в колекції + 4 без неї |"
+    },
+    {
+      "id": "A2",
+      "verdict": "pass",
+      "reason": "У `docs/lab2/baseline.md` створено таблицю вердиктів із 22 рядками (q-01…q-22), що відповідає 22 запитам у `docs/lab2/golden/queries.jsonl`.",
+      "evidence": "docs/lab2/baseline.md:47-68 (таблиця вердиктів з 22 рядками q-01…q-22); docs/lab2/golden/queries.jsonl:1-22 (22 JSON-рядки з id q-01…q-22)"
+    },
+    {
+      "id": "A3",
+      "verdict": "unknown",
+      "reason": "У дифі відсутній файл eval-report.md з результатами пошуку та порогами розділу 3; є лише базова лінія без пошуку (baseline.md).",
+      "evidence": ""
+    },
+    {
+      "id": "A4",
+      "verdict": "unknown",
+      "reason": "У дифі відсутній файл `tests/retrieval.test.ts`, який за критерієм має перевіряти наявність посилань `doc-NN` у відповідях пошуку. Диф додає лише валідатор еталонного набору (`validate-golden.ts`) та тести до нього, але не тест пошуку.",
+      "evidence": ""
+    },
+    {
+      "id": "A5",
+      "verdict": "unknown",
+      "reason": "Диф не містить жодного тестового файлу MCP-сервера, package.json або конфігурації тестів, тому неможливо перевірити, чи проходять вони без мережі й ключів.",
+      "evidence": ""
+    },
+    {
+      "id": "A6",
+      "verdict": "unknown",
+      "reason": "Диф показує зміну конфігурації CI (додано крок валідації еталонного набору), але не містить результату запуску job `verify` на останньому коміті `main` у GitHub Actions.",
+      "evidence": ""
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "judge": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+  "input": "docs/lab2/calibration/case-07.diff",
+  "date": "2026-11-14T16:36:42.967Z",
+  "results": [
+    {
+      "id": "A1",
+      "verdict": "unknown",
+      "reason": "Диф не містить результату запуску скрипта валідації (npx tsx scripts/validate-golden.ts) та не показує вміст queries.jsonl, щоб перевірити кількість запитів і тегів.",
+      "evidence": ""
+    },
+    {
+      "id": "A2",
+      "verdict": "unknown",
+      "reason": "У дифі відсутній файл docs/lab2/baseline.md, тому неможливо перевірити наявність таблиці вердиктів із правильною кількістю рядків.",
+      "evidence": ""
+    },
+    {
+      "id": "A3",
+      "verdict": "fail",
+      "reason": "У diff відсутній файл `docs/lab2/eval-report.md`, а звіт spec-auditor у `subagents.md` прямо стверджує, що його немає ні в змінах, ні в дереві каталогів, тому порівняти числа з порогами розділу 3 не з чим.",
+      "evidence": "docs/lab2/subagents.md:52-54 — «A3 | fail — docs/lab2/eval-report.md немає ні в зміні, ні в дереві… тому числа проти порогів розділу 3 порівняти нема з чим»"
+    },
+    {
+      "id": "A4",
+      "verdict": "fail",
+      "reason": "У доданому файлі subagents.md звіт spec-auditor явно зазначає, що tests/retrieval.test.ts відсутній, а цей тест є перевіркою критерію A4.",
+      "evidence": "docs/lab2/subagents.md:52-53 \"A4 | fail — tests/retrieval.test.ts відсутній; у tests/ є лише smoke.test.ts, scripts.test.ts, health.test.ts, cost.test.ts, agent-loop.test.ts, agent-aisdk.test.ts, validate-golden.test.ts\""
+    },
+    {
+      "id": "A5",
+      "verdict": "unknown",
+      "reason": "Диф містить лише документацію та логи аудиту, але не показує результати запуску `npm test` на чистому клоні без `.env.local`. Критерій вимагає виконання команди, яку неможливо перевірити лише за цим дифом.",
+      "evidence": ""
+    },
+    {
+      "id": "A6",
+      "verdict": "unknown",
+      "reason": "Диф містить лише оновлення документації (autonomy-log.md та новий subagents.md), немає жодних змін у CI конфігурації (.github/workflows/) чи доказів статусу job verify у GitHub Actions.",
+      "evidence": ""
+    }
+  ]
+}

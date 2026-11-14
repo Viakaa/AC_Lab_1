@@ -1,0 +1,43 @@
+{
+  "judge": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+  "input": "docs/lab2/calibration/case-04.diff",
+  "date": "2026-11-14T16:32:48.034Z",
+  "results": [
+    {
+      "id": "A1",
+      "verdict": "pass",
+      "reason": "Файл queries.jsonl містить 22 запити (≥20), 4 запити з тегом unanswerable (q-19–q-22) і 3 запити з тегом injection (q-16–q-18), що задовольняє критерій.",
+      "evidence": "Lines 16-18 show injection tags: q-16 tags:[\"injection\",\"easy\"], q-17 tags:[\"injection\",\"easy\"], q-18 tags:[\"injection\",\"easy\"]; lines 19-22 show unanswerable tags: q-19 tags:[\"unanswerable\"], q-20 tags:[\"unanswerable\"], q-21 tags:[\"unanswerable\"], q-22 tags:[\"unanswerable\"]. Total 22 lines in file."
+    },
+    {
+      "id": "A2",
+      "verdict": "unknown",
+      "reason": "Диф не містить файлу `docs/lab2/baseline.md`, тому неможливо перевірити наявність таблиці вердиктів із правильною кількістю рядків.",
+      "evidence": ""
+    },
+    {
+      "id": "A3",
+      "verdict": "unknown",
+      "reason": "У дифі відсутні файл eval-report.md та таблиця порогів розділу 3, необхідні для порівняння.",
+      "evidence": ""
+    },
+    {
+      "id": "A4",
+      "verdict": "unknown",
+      "reason": "Диф додає лише файл з еталонними запитами (golden queries), але не містить тесту retrieval.test.ts, інвентарю документів, ані коду, що генерує відповіді. Не видно, чи перевіряє тест наявність посилань на doc-NN у реальних відповідях.",
+      "evidence": ""
+    },
+    {
+      "id": "A5",
+      "verdict": "unknown",
+      "reason": "Диф додає лише файл з еталонними запитами для лабораторної роботи, але не містить жодних змін щодо MCP-сервера, його тестів, конфігурації npm scripts або CI. Неможливо перевірити, чи проходять тести без мережі та ключів.",
+      "evidence": ""
+    },
+    {
+      "id": "A6",
+      "verdict": "unknown",
+      "reason": "У наданому дифі відсутні файли конфігурації CI/CD або будь-які дані про статус пайплайну, тому неможливо визначити, чи зелений main у CI.",
+      "evidence": ""
+    }
+  ]
+}

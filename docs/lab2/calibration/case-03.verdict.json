@@ -1,0 +1,43 @@
+{
+  "judge": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+  "input": "docs/lab2/calibration/case-03.diff",
+  "date": "2026-11-14T16:31:32.715Z",
+  "results": [
+    {
+      "id": "A1",
+      "verdict": "pass",
+      "reason": "У файлі docs/lab2/golden/queries.jsonl міститься 22 запити (q-01–q-22), 4 з тегом unanswerable (q-19, q-20, q-21, q-22) та 3 з тегом injection (q-16, q-17, q-18). Це задовольняє всі пороги.",
+      "evidence": "docs/lab2/golden/queries.jsonl:1-22 (22 рядки); рядки з \"unanswerable\": q-19, q-20, q-21, q-22; рядки з \"injection\": q-16, q-17, q-18"
+    },
+    {
+      "id": "A2",
+      "verdict": "unknown",
+      "reason": "Диф не містить файлу docs/lab2/baseline.md, тому неможливо перевірити наявність таблиці вердиктів з правильною кількістю рядків.",
+      "evidence": ""
+    },
+    {
+      "id": "A3",
+      "verdict": "unknown",
+      "reason": "У diff відсутній файл eval-report.md та будь-які числові результати оцінки для порівняння з порогами розділу 3. Додано лише еталонні запити та крок валідації в CI.",
+      "evidence": ""
+    },
+    {
+      "id": "A4",
+      "verdict": "unknown",
+      "reason": "Диф не містить файлу tests/retrieval.test.ts ani інвентарю, тому неможливо перевірити, чи тест перевіряє наявність цитованих id.",
+      "evidence": ""
+    },
+    {
+      "id": "A5",
+      "verdict": "unknown",
+      "reason": "Диф не містить інформації про запуск `npm test`, конфігурацію тестів MCP-сервера чи наявність/відсутність мережевих залежностей і ключів. Зміни стосуються лише валідації еталонних запитів у CI.",
+      "evidence": ""
+    },
+    {
+      "id": "A6",
+      "verdict": "unknown",
+      "reason": "Диф показує зміни у конфігурації CI (додано новий крок валідації) та новий файл з тестовими даними, але не містить результатів виконання job verify у GitHub Actions на останньому коміті main.",
+      "evidence": ""
+    }
+  ]
+}
