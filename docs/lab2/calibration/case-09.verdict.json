@@ -1,0 +1,43 @@
+{
+  "judge": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+  "input": "docs/lab2/calibration/case-09.diff",
+  "date": "2026-11-15T14:20:18.276Z",
+  "results": [
+    {
+      "id": "A1",
+      "verdict": "unknown",
+      "reason": "Диф не містить файлу `docs/lab2/golden/queries.jsonl`, тому неможливо перевірити кількість запитів і тегів. Змінено лише пороги у скрипті валідації, але еталонний набір даних не представлений.",
+      "evidence": ""
+    },
+    {
+      "id": "A2",
+      "verdict": "unknown",
+      "reason": "Диф не містить змін у файлі docs/lab2/baseline.md, тому неможливо перевірити наявність таблиці вердиктів.",
+      "evidence": ""
+    },
+    {
+      "id": "A3",
+      "verdict": "unknown",
+      "reason": "Дифф лише змінює ліміти підання у скрипті валідації, але не містить eval-report.md ani таблиці порогів розділу 3 для порівняння.",
+      "evidence": ""
+    },
+    {
+      "id": "A4",
+      "verdict": "unknown",
+      "reason": "Диф зміщує лише константи лімітів у `scripts/validate-golden.ts` і не містить тесту `tests/retrieval.test.ts` ani логіки пошуку, необхідних для перевірки критерію.",
+      "evidence": ""
+    },
+    {
+      "id": "A5",
+      "verdict": "unknown",
+      "reason": "Диф змішує лише порогові значення валідації золотого набору даних, не торкаючись тестів MCP-сервера, конфігурації npm test чи середовища виконання.",
+      "evidence": ""
+    },
+    {
+      "id": "A6",
+      "verdict": "unknown",
+      "reason": "Диф не містить інформації про GitHub Actions workflow, job verify або статус CI на гілці main. Це зміна порогів валідації в TypeScript-файлі.",
+      "evidence": ""
+    }
+  ]
+}

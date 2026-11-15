@@ -1,0 +1,43 @@
+{
+  "judge": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+  "input": "docs/lab2/calibration/case-08.diff",
+  "date": "2026-11-15T14:18:52.463Z",
+  "results": [
+    {
+      "id": "A1",
+      "verdict": "unknown",
+      "reason": "Диф не містить файлу docs/lab2/golden/queries.jsonl ani скрипта scripts/validate-golden.ts, тому неможливо перевірити критерій.",
+      "evidence": ""
+    },
+    {
+      "id": "A2",
+      "verdict": "unknown",
+      "reason": "Диф не містить змін у файлі docs/lab2/baseline.md, тому неможливо перевірити наявність таблиці вердиктів з правильною кількістю рядків.",
+      "evidence": ""
+    },
+    {
+      "id": "A3",
+      "verdict": "unknown",
+      "reason": "У дифі відсутній файл eval-report.md та будь-які дані про пороги розділу 3, тому неможливо порівняти результати пошуку з цілями.",
+      "evidence": ""
+    },
+    {
+      "id": "A4",
+      "verdict": "unknown",
+      "reason": "У дифі відсутній файл tests/retrieval.test.ts та будь-який код, що відповідає за пошук та цитування doc-NN. Неможливо перевірити критерій без цього артефакту.",
+      "evidence": ""
+    },
+    {
+      "id": "A5",
+      "verdict": "unknown",
+      "reason": "Диф не містить жодного тестового файлу, результатів `npm test`, конфігурації CI чи package.json scripts. Єдині зміни — лог-агента та скрипт замірів продуктивності. Немає артефакту, що підтверджує проходження тестів MCP-сервера без мережі/ключів.",
+      "evidence": ""
+    },
+    {
+      "id": "A6",
+      "verdict": "unknown",
+      "reason": "Диф не містить файлів GitHub Actions workflow (наприклад, .github/workflows/*.yml) або результатів CI-перевірки job verify. Критерій вимагає перевірки статусу CI на GitHub, що недоступно в цьому змісті.",
+      "evidence": ""
+    }
+  ]
+}
