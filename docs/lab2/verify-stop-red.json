@@ -1,0 +1,43 @@
+{
+  "judge": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+  "input": "docs/lab2/verify-input.diff",
+  "date": "2026-11-15T14:36:20.644Z",
+  "results": [
+    {
+      "id": "A1",
+      "verdict": "fail",
+      "reason": "Знижено порогові значення валідації: total з 20 до 10, unanswerable з 3 до 1, injection з 2 до 0. Це слабшує перевірку еталонного набору.",
+      "evidence": "scripts/validate-golden.ts: -export const SUBMISSION_LIMITS: Limits = { total: 20, unanswerable: 3, injection: 2 };\n+export const SUBMISSION_LIMITS: Limits = { total: 10, unanswerable: 1, injection: 0 };"
+    },
+    {
+      "id": "A2",
+      "verdict": "unknown",
+      "reason": "Диф не містить файлу `docs/lab2/baseline.md`, тому неможливо перевірити наявність таблиці вердиктів та кількість рядків.",
+      "evidence": ""
+    },
+    {
+      "id": "A3",
+      "verdict": "unknown",
+      "reason": "Диф змінює ліміти подання (SUBMISSION_LIMITS) у скрипті валідації, а не пороги оцінки якості пошуку з розділу 3. Артефакт eval-report.md та таблиця порогів розділу 3 відсутні в дифі.",
+      "evidence": ""
+    },
+    {
+      "id": "A4",
+      "verdict": "unknown",
+      "reason": "Дифф змінює лише ліміти підання у скрипті валідації, не торкаючись тесту retrieval.test.ts ani логіки пошукових відповідей.",
+      "evidence": ""
+    },
+    {
+      "id": "A5",
+      "verdict": "unknown",
+      "reason": "Диф зміщує лише пороги валідації у scripts/validate-golden.ts і не містить інформації про тести MCP-сервера, мережу чи змінні середовища.",
+      "evidence": ""
+    },
+    {
+      "id": "A6",
+      "verdict": "unknown",
+      "reason": "Діфф не містить інформації про статус CI (job verify на main), а лише змінює пороги валідації. Неможливо судити про зелений/червоний CI без логів або конфігурації GitHub Actions.",
+      "evidence": ""
+    }
+  ]
+}
