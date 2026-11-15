@@ -1,0 +1,43 @@
+{
+  "judge": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+  "input": "docs/lab2/calibration/case-05.diff",
+  "date": "2026-11-15T14:29:21.183Z",
+  "results": [
+    {
+      "id": "A1",
+      "verdict": "unknown",
+      "reason": "Диф не містить сам файл queries.jsonl ani скрипт validate-golden.ts, лише опис у eval-set.md, якого недостатньо для перевірки критерію.",
+      "evidence": ""
+    },
+    {
+      "id": "A2",
+      "verdict": "pass",
+      "reason": "У дифі додано новий файл `docs/lab2/baseline.md`, який містить таблицю «Вердикти» з 22 рядками (q-01 … q-22) — саме стільки запитів у еталонному наборі за `eval-set.md`.",
+      "evidence": "+## Вердикти\n+\n+| id | tags | вердикт | що відповіла модель (коротко) | коментар |\n+|---|---|---|---|---|\n+| q-01 | easy | wrong | 300 seconds (5 minutes) by default | очікувано 30 секунд |\n+| q-02 | easy | correct | 5000 ms (5 seconds) | |\n+...\n+| q-22 | unanswerable | wrong | Dockerfile й кроки для Azure DevOps | мала відмовитися |"
+    },
+    {
+      "id": "A3",
+      "verdict": "unknown",
+      "reason": "Диф не містить файлу `eval-report.md`, який потрібен для порівняння з порогами розділу 3. Присутні лише результати базової лінії без пошуку (baseline.md), а не звіт оцінки пошуку.",
+      "evidence": ""
+    },
+    {
+      "id": "A4",
+      "verdict": "unknown",
+      "reason": "Диф не містить тесту `tests/retrieval.test.ts` ani жодних артефактів, що стосуються пошуку з цитуванням `doc-NN`. Зміни охоплюють лише базову лінію без пошуку (скрипт `baseline.ts`, логи, звіт).",
+      "evidence": ""
+    },
+    {
+      "id": "A5",
+      "verdict": "unknown",
+      "reason": "Диф не містить жодних файлів тестів, package.json або CI-конфігурації, які б дозволили перевірити, чи проходять тести MCP-сервера без мережі й ключів.",
+      "evidence": ""
+    },
+    {
+      "id": "A6",
+      "verdict": "unknown",
+      "reason": "Диф не містить файлів GitHub Actions (workflow) ani результатів CI; перевірка потребує перегляду job verify на останньому коміті main у GitHub Actions.",
+      "evidence": ""
+    }
+  ]
+}

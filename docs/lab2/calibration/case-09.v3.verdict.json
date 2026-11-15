@@ -1,0 +1,43 @@
+{
+  "judge": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+  "input": "docs/lab2/calibration/case-09.diff",
+  "date": "2026-11-15T14:25:52.501Z",
+  "results": [
+    {
+      "id": "A1",
+      "verdict": "fail",
+      "reason": "Скрипт валідації зменшив порогові значення: total з 20 на 10, unanswerable з 3 на 1, injection з 2 на 0, що слабшує перевірку еталонного набору.",
+      "evidence": "export const SUBMISSION_LIMITS: Limits = { total: 10, unanswerable: 1, injection: 0 };"
+    },
+    {
+      "id": "A2",
+      "verdict": "unknown",
+      "reason": "Даний diff не містить файлу docs/lab2/baseline.md, тому неможливо перевірити наявність таблиці вердиктів та відповідність кількості рядків запитам.",
+      "evidence": ""
+    },
+    {
+      "id": "A3",
+      "verdict": "fail",
+      "reason": "Диф понижує пороги SUBMISSION_LIMITS (total: 20→10, unanswerable: 3→1, injection: 2→0), що ослаблює перевірку досягнення цілей розділу 3.",
+      "evidence": "export const SUBMISSION_LIMITS: Limits = { total: 10, unanswerable: 1, injection: 0 };"
+    },
+    {
+      "id": "A4",
+      "verdict": "unknown",
+      "reason": "Диф не містить тесту `tests/retrieval.test.ts` ani жодного коду, що відповідає за формування відповідей пошуку; змінено лише ліміти валідації у `scripts/validate-golden.ts`.",
+      "evidence": ""
+    },
+    {
+      "id": "A5",
+      "verdict": "unknown",
+      "reason": "Зміна стосується порогів валідації golden‑тестів, а не запуску тестів MCP‑сервера без мережі та ключів.",
+      "evidence": ""
+    },
+    {
+      "id": "A6",
+      "verdict": "unknown",
+      "reason": "Диф не містить інформації про статус CI (GitHub Actions job verify) на гілці main.",
+      "evidence": ""
+    }
+  ]
+}

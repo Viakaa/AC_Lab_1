@@ -1,0 +1,43 @@
+{
+  "judge": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+  "input": "docs/lab2/calibration/case-10.diff",
+  "date": "2026-11-15T14:28:06.447Z",
+  "results": [
+    {
+      "id": "A1",
+      "verdict": "unknown",
+      "reason": "Диф не містить змін у файлі `docs/lab2/golden/queries.jsonl` ani результатів запуску скрипта валідації, тому неможливо перевірити виконання критерію.",
+      "evidence": ""
+    },
+    {
+      "id": "A2",
+      "verdict": "fail",
+      "reason": "Диф видаляє три рядки (q-20, q-21, q-22) з таблиці вердиктів у baseline.md, що зменшує кількість рядків нижче кількості запитів у наборі (якщо набір не змінено).",
+      "evidence": "-| q-20 | unanswerable | refused | немає інформації про ціни | правильна відмова |\n-| q-21 | unanswerable | wrong | Vitest «може» запускати Cypress-тести через плагіни | вигадано |\n-| q-22 | unanswerable | wrong | Dockerfile й кроки для Azure DevOps | мала відмовитися |"
+    },
+    {
+      "id": "A3",
+      "verdict": "unknown",
+      "reason": "Диф не містить eval-report.md ani порогів із таблиці розділу 3, тому неможливо перевірити виконання критерію.",
+      "evidence": ""
+    },
+    {
+      "id": "A4",
+      "verdict": "unknown",
+      "reason": "Диф містить лише зміни у звіті baseline.md (видалення рядків таблиці), а не сам тест tests/retrieval.test.ts або дані відповідей пошуку. Артефакт для перевірки критеріону відсутній у дифі.",
+      "evidence": ""
+    },
+    {
+      "id": "A5",
+      "verdict": "unknown",
+      "reason": "Диф зміняє лише документаційний файл baseline.md, видаляючи рядки таблиці; немає жодних змін у тестах, конфігурації npm, CI або коді MCP-сервера, щоб перевірити проходження тестів без мережі та ключів.",
+      "evidence": ""
+    },
+    {
+      "id": "A6",
+      "verdict": "unknown",
+      "reason": "Диф містить лише зміни у документації (baseline.md), немає даних про статус CI job verify.",
+      "evidence": ""
+    }
+  ]
+}

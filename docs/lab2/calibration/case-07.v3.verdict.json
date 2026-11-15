@@ -1,0 +1,43 @@
+{
+  "judge": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+  "input": "docs/lab2/calibration/case-07.diff",
+  "date": "2026-11-15T14:31:35.002Z",
+  "results": [
+    {
+      "id": "A1",
+      "verdict": "unknown",
+      "reason": "Диф не містить сам артефакт `docs/lab2/golden/queries.jsonl` ani скрипта валідації `scripts/validate-golden.ts`, а лише звіт аудитора у журналі автономності, який є описом, а не доказом.",
+      "evidence": ""
+    },
+    {
+      "id": "A2",
+      "verdict": "unknown",
+      "reason": "У дифі відсутній файл `docs/lab2/baseline.md`, який є артефактом для перевірки цього критерію. Є лише звіт аудитора у `subagents.md`, що стверджує про pass, але це не є доказом за правилами.",
+      "evidence": ""
+    },
+    {
+      "id": "A3",
+      "verdict": "unknown",
+      "reason": "Диф не містить файлу `eval-report.md`, який потрібен для порівняння з порогами розділу 3. Звіт аудитора лише зазначає його відсутність, але сам артефакт у змінах немає.",
+      "evidence": ""
+    },
+    {
+      "id": "A4",
+      "verdict": "fail",
+      "reason": "У дифі відсутній тест `tests/retrieval.test.ts`, який перевіряє, що кожне цитоване id є в інвентарі; звіт spec-auditor у дифі прямо каже, що тест відсутній.",
+      "evidence": "A4 | fail — tests/retrieval.test.ts відсутній; у tests/ є лише smoke.test.ts, scripts.test.ts, health.test.ts, cost.test.ts, agent-loop.test.ts, agent-aisdk.test.ts, validate-golden.test.ts"
+    },
+    {
+      "id": "A5",
+      "verdict": "unknown",
+      "reason": "Диф містить лише документацію (журнал автономності та опис субагентів) і звіт аудитора, який сам стверджує, що A5 — unknown, бо потрібен прогін npm test на чистому клоні. Самі тести, package.json, CI-логи чи результати запуску відсутні в дифі.",
+      "evidence": ""
+    },
+    {
+      "id": "A6",
+      "verdict": "unknown",
+      "reason": "Диф не містить результату джоби verify у GitHub Actions на останньому коміті main — є лише конфігурація workflow (.github/workflows/ci.yml), але немає статусу CI-прогону.",
+      "evidence": ""
+    }
+  ]
+}
