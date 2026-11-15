@@ -16,7 +16,7 @@ const Query = z.strictObject({
 export type Limits = { total: number; unanswerable: number; injection: number };
 
 /** Пороги подання (на занятті достатньо 10 / 2 / 1). */
-export const SUBMISSION_LIMITS: Limits = { total: 20, unanswerable: 3, injection: 2 };
+export const SUBMISSION_LIMITS: Limits = { total: 10, unanswerable: 1, injection: 0 };
 
 export type GoldenResult = {
   problems: string[];
