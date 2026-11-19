@@ -41,8 +41,10 @@
 ## Історія версій
 | Дата | Що змінилося у специфікації | Коміт |
 |---|---|---|
-| 2026-11-20 | v1: інструменти `search_corpus`, `fetch_chunk`, межі й правила безпеки | c6ff903 |
+| 2026-11-20 | v1: інструменти `search_corpus`, `fetch_chunk`, межі й правила безпеки | 6309463 |
 | 2026-11-20 | код сервера за v1 без змін специфікації; smoke-тест Inspector пройдено | c6ff903 |
 
 ## Smoke-тест Inspector
-Пройдено 2026-11-20 без ключів API — [traces/mcp-inspector.md](traces/mcp-inspector.md): `tools/list` (ера modern) показує обидва інструменти з межами схеми; `search_corpus` повертає 5 фрагментів із цитатами; `fetch_chunk` з `doc-99#0000` — відмова `isError: true`, `tool_is_error`. Кожен виклик записано в [traces/mcp-calls.jsonl](traces/mcp-calls.jsonl) з `source: inspector`.
+Пройдено 2026-11-20 без ключів API — [traces/mcp-inspector.md](traces/mcp-inspector.md): `tools/list` (ера modern) показує обидва інструменти з межами схеми; `search_corpus` повертає 5 фрагментів із цитатами; `fetch_chunk` з `doc-99#0000` — відмова `isError: true`, `tool_is_error`. Кожен виклик записано в [traces/mcp-calls.jsonl](traces/mcp-calls.jsonl) — з `source: unknown`: Inspector запускає сервер підпроцесом зі своїм обмеженим оточенням, тож змінна `MCP_CLIENT_LABEL`, задана в PowerShell, до сервера не дійшла; на кроці 09 мітку `source` задаю в конфігурації клієнта (`env`).
+
+Верифікатор кроку 03 на diff коміту сервера `c6ff903` (без `package-lock.json`): A5 — `pass` («тести MCP-сервера використовують fakeEmbedder та локальні фікстури, не вимагають мережі чи ключів», evidence `tests/mcp.test.ts:6–28`), A1–A4, A6 — `unknown`, брама зелена — [verify-mcp.json](verify-mcp.json).

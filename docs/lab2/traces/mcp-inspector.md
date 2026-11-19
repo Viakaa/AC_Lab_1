@@ -1,6 +1,6 @@
 # Smoke-тест MCP-сервера lab2-corpus через Inspector
 
-Дата: 2026-11-20 · Inspector `@modelcontextprotocol/inspector@2.13.0` · сервер `npx tsx src/mcp/server.ts` · ключів API немає (`MCP_CLIENT_LABEL=inspector`, Ollama локально).
+Дата: 2026-11-20 · Inspector `@modelcontextprotocol/inspector@2.13.0` · сервер `npx tsx src/mcp/server.ts` · ключів API немає (Ollama локально; MCP_CLIENT_LABEL з PowerShell до сервера не дійшов — у mcp-calls.jsonl source: unknown).
 
 ## 1. tools/list (ера modern)
 ```
