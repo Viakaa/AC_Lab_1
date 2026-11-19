@@ -1,5 +1,5 @@
 {
-  "runAt": "2026-11-19T19:45:37.693Z",
+  "runAt": "2026-11-19T20:10:54.976Z",
   "model": "qwen2.5-coder:7b (ollama-messages)",
   "k": 5,
   "setFile": "docs/lab2/golden/queries.jsonl",
@@ -38,14 +38,16 @@
       ],
       "recallAtK": 1,
       "reciprocalRank": 1,
-      "answer": "A single Playwright test runs for a maximum of 30 seconds by default before timing out.",
-      "citedDocs": [],
+      "answer": "A single Playwright test runs for a maximum of 30 seconds by default before timing out [doc-13#0001].",
+      "citedDocs": [
+        "doc-13"
+      ],
       "inputTokens": 1270,
-      "outputTokens": 21,
-      "latencyMs": 3647,
+      "outputTokens": 31,
+      "latencyMs": 41886,
       "verdict": "correct",
       "baselineVerdict": "wrong",
-      "citationCorrect": false
+      "citationCorrect": true
     },
     {
       "id": "q-02",
@@ -81,14 +83,16 @@
       ],
       "recallAtK": 1,
       "reciprocalRank": 1,
-      "answer": "The default timeout for auto-retrying assertions like toHaveText in Playwright is 5 seconds.",
-      "citedDocs": [],
+      "answer": "The default timeout for auto-retrying assertions like `method: LocatorAssertions.toHaveText` in Playwright is 5 seconds. [doc-13#0006]",
+      "citedDocs": [
+        "doc-13"
+      ],
       "inputTokens": 1214,
-      "outputTokens": 21,
-      "latencyMs": 3640,
+      "outputTokens": 38,
+      "latencyMs": 33333,
       "verdict": "correct",
       "baselineVerdict": "correct",
-      "citationCorrect": false
+      "citationCorrect": true
     },
     {
       "id": "q-03",
@@ -124,16 +128,14 @@
       ],
       "recallAtK": 1,
       "reciprocalRank": 1,
-      "answer": "To scaffold a new Playwright project, you can use one of the following commands depending on the package manager you are using:\n\n- **npm**:\n  ```bash\n  npm init playwright@latest\n  ```\n\n- **yarn**:\n  ```bash\n  yarn create playwright\n  ```\n\n- **pnpm**:\n  ```bash\n  pnpm create playwright\n  ```\n\nAfter running the command, you will be prompted to choose options such as TypeScript or JavaScript, the tests folder name, whether to add a GitHub Actions workflow, and whether to install Playwright browsers. [doc-05#0003]",
-      "citedDocs": [
-        "doc-05"
-      ],
+      "answer": "The command to scaffold a new Playwright project is:\n\n```bash\nnpm init playwright@latest\n```\n\nYou can also use `yarn create playwright` or `pnpm create playwright` for Yarn and pnpm, respectively.",
+      "citedDocs": [],
       "inputTokens": 1162,
-      "outputTokens": 132,
-      "latencyMs": 68173,
+      "outputTokens": 49,
+      "latencyMs": 32270,
       "verdict": "correct",
       "baselineVerdict": "wrong",
-      "citationCorrect": true
+      "citationCorrect": false
     },
     {
       "id": "q-04",
@@ -169,14 +171,16 @@
       ],
       "recallAtK": 1,
       "reciprocalRank": 1,
-      "answer": "To open the HTML report after a Playwright test run, you can use the following command depending on your package manager:\n\nFor npm:\n```bash\nnpx playwright show-report\n```\n\nFor yarn:\n```bash\nyarn playwright show-report\n```\n\nFor pnpm:\n```bash\npnpm exec playwright show-report\n```\n\nThis command will automatically open the HTML report in your default browser, or you can manually open it by following the instructions in the documentation.",
-      "citedDocs": [],
+      "answer": "To open the HTML report after a Playwright test run, you can use the following command:\n\n```bash\nnpx playwright show-report\n```\n\nThis command will open the HTML test report in your default browser. If no failures occur, the report might auto-open only when there are failures. If it doesn't, you can open it manually with the command above. [doc-05#0007]",
+      "citedDocs": [
+        "doc-05"
+      ],
       "inputTokens": 1186,
-      "outputTokens": 96,
-      "latencyMs": 63965,
+      "outputTokens": 86,
+      "latencyMs": 36993,
       "verdict": "correct",
       "baselineVerdict": "wrong",
-      "citationCorrect": false
+      "citationCorrect": true
     },
     {
       "id": "q-05",
@@ -212,11 +216,11 @@
       ],
       "recallAtK": 1,
       "reciprocalRank": 1,
-      "answer": "Playwright performs several checks on an element before it clicks it to ensure the action behaves as expected. These checks include:\n\n- Ensuring the locator resolves to exactly one element.\n- Checking if the element is visible.\n- Verifying the element is stable, meaning it is not animating or in the process of completing an animation.\n- Confirming the element receives pointer events, which means it is the hit target of the pointer event at the action point.\n- Ensuring the element is enabled.\n- Checking if the element is not inert.\n\nThese checks help to prevent actions from occurring on elements that might not be interactable or might not respond as expected.",
+      "answer": "Playwright performs a range of actionability checks on an element before clicking it to ensure the action behaves as expected. These checks include:\n\n- The element resolves to exactly one element.\n- The element is visible.\n- The element is stable (not animating or completed animation).\n- The element receives events (not obscured by other elements).\n- The element is enabled.\n- The element is not inert.",
       "citedDocs": [],
       "inputTokens": 1090,
-      "outputTokens": 132,
-      "latencyMs": 63813,
+      "outputTokens": 81,
+      "latencyMs": 34522,
       "verdict": "correct",
       "baselineVerdict": "partial",
       "citationCorrect": false
@@ -255,16 +259,14 @@
       ],
       "recallAtK": 1,
       "reciprocalRank": 1,
-      "answer": "Playwright calls a test that fails on the first run but passes when it is retried a \"flaky\" test. [doc-12#0004]",
-      "citedDocs": [
-        "doc-12"
-      ],
+      "answer": "Playwright calls a test that fails on the first run but passes when it is retried a \"flaky\" test.",
+      "citedDocs": [],
       "inputTokens": 1245,
-      "outputTokens": 37,
-      "latencyMs": 56875,
+      "outputTokens": 26,
+      "latencyMs": 34278,
       "verdict": "correct",
       "baselineVerdict": "correct",
-      "citationCorrect": true
+      "citationCorrect": false
     },
     {
       "id": "q-07",
@@ -300,13 +302,13 @@
       ],
       "recallAtK": 1,
       "reciprocalRank": 1,
-      "answer": "To make Playwright record a trace only when a test gets retried, you can use the `trace: 'on-first-retry'` option in your test configuration file. This ensures that a `trace.zip` file is created for the first retry of each failed test [doc-14#0008].",
+      "answer": "To make Playwright record a trace only when a test gets retried, you can use the `trace: 'on-first-retry'` option in your test configuration file [doc-14#0007]. This will produce a `trace.zip` file for each test that was retried.",
       "citedDocs": [
         "doc-14"
       ],
       "inputTokens": 1289,
-      "outputTokens": 67,
-      "latencyMs": 62940,
+      "outputTokens": 64,
+      "latencyMs": 38883,
       "verdict": "correct",
       "baselineVerdict": "wrong",
       "citationCorrect": true
@@ -345,16 +347,14 @@
       ],
       "recallAtK": 1,
       "reciprocalRank": 1,
-      "answer": "To run all Playwright tests with the inspector open from the command line, you can use the following command:\n\n```bash\nnpx playwright test --debug\n```\n\nThis command will execute all the tests one by one and open the inspector along with a browser window for each test. [doc-04#0010]",
-      "citedDocs": [
-        "doc-04"
-      ],
+      "answer": "To run all Playwright tests with the inspector open from the command line, use the `--debug` flag:\n\n```bash\nnpx playwright test --debug\n```",
+      "citedDocs": [],
       "inputTokens": 915,
-      "outputTokens": 69,
-      "latencyMs": 45748,
+      "outputTokens": 35,
+      "latencyMs": 25542,
       "verdict": "correct",
       "baselineVerdict": "wrong",
-      "citationCorrect": true
+      "citationCorrect": false
     },
     {
       "id": "q-09",
@@ -390,16 +390,14 @@
       ],
       "recallAtK": 1,
       "reciprocalRank": 1,
-      "answer": "Vitest uses the `v8` coverage provider by default. The other option is `istanbul`.\n\n[doc-17#0002]",
-      "citedDocs": [
-        "doc-17"
-      ],
+      "answer": "Vitest uses the `v8` coverage provider by default. The other option is `istanbul`.",
+      "citedDocs": [],
       "inputTokens": 1412,
-      "outputTokens": 33,
-      "latencyMs": 64402,
+      "outputTokens": 22,
+      "latencyMs": 37282,
       "verdict": "correct",
       "baselineVerdict": "wrong",
-      "citationCorrect": true
+      "citationCorrect": false
     },
     {
       "id": "q-10",
@@ -435,11 +433,11 @@
       ],
       "recallAtK": 1,
       "reciprocalRank": 1,
-      "answer": "To refresh stored snapshots in Vitest from the command line, you can use the `--update` or `-u` flag. For example:\n\n```bash\nvitest -u\n```\n\nThis command will update all snapshots that have changed since the last run.",
+      "answer": "You can refresh stored snapshots in Vitest from the command line by using the `--update` or `-u` flag. For example:\n\n```bash\nvitest -u\n```\n\nThis command will update snapshots based on the current test output.",
       "citedDocs": [],
       "inputTokens": 1102,
-      "outputTokens": 54,
-      "latencyMs": 52200,
+      "outputTokens": 51,
+      "latencyMs": 30761,
       "verdict": "correct",
       "baselineVerdict": "partial",
       "citationCorrect": false
@@ -479,14 +477,16 @@
       ],
       "recallAtK": 1,
       "reciprocalRank": 1,
-      "answer": "To stub an API response in a Playwright test, you can use the `page.route` method to intercept the request and provide a custom response. Here's a simple example:\n\n```js\nawait page.route('**/api/fetch_data', route => route.fulfill({\n  status: 200,\n  body: testData,\n}));\n```\n\nRegarding third-party services, the advice is to avoid testing them directly. Instead, you should mock the responses from third-party services using Playwright's network API. This ensures that your tests are faster, more reliable, and less dependent on external factors.",
-      "citedDocs": [],
+      "answer": "To stub an API response in a Playwright test, you can use the `page.route` method to intercept and modify the response. Here's an example:\n\n```js\nawait page.route('**/api/fetch_data_third_party_dependency', route => route.fulfill({\n  status: 200,\n  body: testData,\n}));\nawait page.goto('https://example.com');\n```\n\nThe advice suggests avoiding testing third-party dependencies [doc-03#0006]. It recommends not testing external sites or third-party servers that you don't control, as this can slow down your tests and is outside your control. Instead, use the Playwright Network API to guarantee the response needed for your tests.",
+      "citedDocs": [
+        "doc-03"
+      ],
       "inputTokens": 1113,
-      "outputTokens": 123,
-      "latencyMs": 62285,
+      "outputTokens": 146,
+      "latencyMs": 41860,
       "verdict": "correct",
       "baselineVerdict": "wrong",
-      "citationCorrect": false
+      "citationCorrect": true
     },
     {
       "id": "q-12",
@@ -523,11 +523,11 @@
       ],
       "recallAtK": 0.5,
       "reciprocalRank": 0.5,
-      "answer": "To turn on automatic reruns in CI for Playwright tests and then inspect what happened in the rerun, you can configure retries in your Playwright configuration file. Here's how you can do it:\n\n1. **Configure retries in the configuration file**:\n   ```js\n   import { defineConfig } from '@playwright/test';\n\n   export default defineConfig({\n     retries: 3, // Set the number of retries you want\n   });\n   ```\n\n2. **Run the tests with retries enabled**:\n   ```bash\n   npx playwright test\n   ```\n\n3. **Inspect the traces**:\n   - When a test fails and is retried, Playwright will create a trace for each attempt.\n   - Use the [trace viewer](./trace-viewer.md) to open and inspect these traces. The traces are saved locally and can be shared.\n\n4. **View the timeline and inspect DOM snapshots**:\n   - Open the trace viewer and navigate through the timeline.\n   - Use DevTools to inspect DOM snapshots for each action.\n   - Check network requests and other details to understand why the test failed.\n\n5. **Analyze the results**:\n   - Review the logs and traces to identify the root cause of the flakiness.\n   - Adjust your tests or environment to mitigate the issues.\n\nBy following these steps, you can effectively manage flaky tests in CI by rerunning them and analyzing the detailed traces.",
+      "answer": "To turn on automatic retries for Playwright tests in CI, you can configure the `retries` option in your Playwright configuration file or pass it as a command-line flag. Here's how you can do it:\n\n### Configuration File\nEdit your `playwright.config.ts` file and set the `retries` option:\n\n```js title=\"playwright.config.ts\"\nimport { defineConfig } from '@playwright/test';\n\nexport default defineConfig({\n  retries: 3, // Number of retries for failing tests\n});\n```\n\n### Command Line\nYou can also specify the number of retries directly when running the tests:\n\n```bash\nnpx playwright test --retries=3\n```\n\n### Inspecting Reruns\nWhen a test fails and is retried, Playwright will automatically generate a trace for each retry. You can view these traces using the Playwright Trace Viewer, which provides a detailed timeline and inspection capabilities.\n\n1. **Generate a Trace**: Run your tests with tracing enabled:\n    ```bash\n    npx playwright test --trace on\n    ```\n\n2. **View the Trace**: After the tests run, you can open the trace in the Trace Viewer by running:\n    ```bash\n    npx playwright show-trace <trace-file>.zip\n    ```\n\nBy using the Trace Viewer, you can inspect each retry in detail, view network requests, DOM snapshots, and other information to diagnose flaky tests.",
       "citedDocs": [],
       "inputTokens": 1392,
       "outputTokens": 294,
-      "latencyMs": 67661,
+      "latencyMs": 68008,
       "verdict": "wrong",
       "baselineVerdict": "partial",
       "citationCorrect": false
@@ -567,14 +567,14 @@
       ],
       "recallAtK": 0.5,
       "reciprocalRank": 1,
-      "answer": "Element conditions that could block a click include being invisible, disabled, or not stable. To step through the test and see what happens, use the Playwright Inspector, which allows you to play, pause, or step through each action of your test. This lets you see the current action highlighted in the test code and matching elements highlighted in the browser window. [doc-04#0016]",
+      "answer": "When a Playwright click action fails, several element conditions could block it. The element might not be visible, enabled, or stable, or it might not be in the viewport. To debug this issue, you can use the Playwright Inspector.\n\n1. **Open the Playwright Inspector** by running your test with the `--ui` flag or by clicking the \"Open Inspector\" button in the terminal [doc-04#0008].\n2. **Play or step through the test** in the Inspector. You can use the toolbar at the top of the Inspector to play, pause, or step through each action [doc-04#0016].\n3. **Watch the actionability logs** while stepping through the test. These logs provide detailed information about what Playwright is doing, such as whether the element is visible, enabled, and stable, or if the locator resolved to an element [doc-04#0020].\n4. **Inspect the element in the browser window** to see if it matches the expectations based on the logs.\n\nBy following these steps, you can identify why the click action is failing and make necessary adjustments to your test or the element itself.",
       "citedDocs": [
         "doc-04"
       ],
       "inputTokens": 1005,
-      "outputTokens": 83,
-      "latencyMs": 30992,
-      "verdict": "partial",
+      "outputTokens": 247,
+      "latencyMs": 53240,
+      "verdict": "wrong",
       "baselineVerdict": "partial",
       "citationCorrect": true
     },
@@ -613,12 +613,14 @@
       ],
       "recallAtK": 1,
       "reciprocalRank": 1,
-      "answer": "The assertion is failing due to a timeout, even though the test timeout is set much longer, because the assertion itself has a separate timeout by default. The default assertion timeout is 5 seconds, which is shorter than the test timeout.\n\nTo retry a custom value until it matches, you can use async matchers that automatically retry, such as `expect(page.getByTestId('status')).toHaveText('Submitted')`. These matchers will keep checking the condition until it is met or until their timeout is reached.\n\nIf you need to customize the retry behavior, you can adjust the `property: TestConfig.expect` value in your test config. For example, you can set a custom timeout for assertions:\n\n```js\nimport { defineConfig } from '@playwright/test';\n\nexport default defineConfig({\n  expect: {\n    timeout: 10000, // 10 seconds\n  },\n});\n```\n\nThis will set the assertion timeout to 10 seconds for all tests in your project. If you need more granular control, you can use the `page.waitForSelector` method with a custom timeout:\n\n```js\nawait page.waitForSelector('button', { timeout: 10000 });\n```\n\nThis will wait up to 10 seconds for the selector to appear.",
-      "citedDocs": [],
+      "answer": "Your assertion is timing out because it's waiting for a condition to be met within the default 5-second timeout, not the 30-second test timeout. To retry a custom value until it matches, you can use `expect.poll`.\n\n```js\nconst result = await expect.poll(async () => {\n  const value = await page.textContent('some-selector');\n  return value === 'expectedValue';\n}, { timeout: 30000, interval: 1000 });\n```\n\nThis code will keep polling every second for up to 30 seconds, checking if the text content of `some-selector` matches `expectedValue`. If it does, it will return `true`; otherwise, it will continue to retry until the timeout is reached.\n\nFor more details, see the [Assertions guide](./test-assertions.md#polling) [doc-15#0007].",
+      "citedDocs": [
+        "doc-15"
+      ],
       "inputTokens": 1063,
-      "outputTokens": 262,
-      "latencyMs": 51405,
-      "verdict": "partial",
+      "outputTokens": 186,
+      "latencyMs": 48173,
+      "verdict": "correct",
       "baselineVerdict": "wrong",
       "citationCorrect": false
     },
@@ -657,11 +659,11 @@
       ],
       "recallAtK": 1,
       "reciprocalRank": 1,
-      "answer": "To run Vitest snapshot tests concurrently and refresh the snapshots from the CLI, you can use the `--update` or `-u` flag. This allows you to update snapshots interactively or via the command line.",
+      "answer": "To run Vitest snapshot tests concurrently and refresh snapshots from the CLI, you can use the `--update` or `-u` flag. Here's how you can do it:\n\n```bash\nvitest -u\n```\n\nThis command will update snapshots based on the current test results, allowing you to refresh them as needed for concurrent test runs.",
       "citedDocs": [],
       "inputTokens": 880,
-      "outputTokens": 44,
-      "latencyMs": 24809,
+      "outputTokens": 71,
+      "latencyMs": 28704,
       "verdict": "partial",
       "baselineVerdict": "wrong",
       "citationCorrect": false
@@ -705,7 +707,7 @@
       "citedDocs": [],
       "inputTokens": 0,
       "outputTokens": 0,
-      "latencyMs": 81,
+      "latencyMs": 83,
       "verdict": "refused",
       "baselineVerdict": "wrong",
       "citationCorrect": false
@@ -749,7 +751,7 @@
       "citedDocs": [],
       "inputTokens": 1354,
       "outputTokens": 4,
-      "latencyMs": 32859,
+      "latencyMs": 34110,
       "verdict": "wrong",
       "baselineVerdict": "wrong",
       "citationCorrect": false
@@ -789,14 +791,16 @@
       ],
       "recallAtK": 1,
       "reciprocalRank": 1,
-      "answer": "Playwright saves the login state to the `playwright/.auth` directory by default. To keep it out of git, add the directory to your `.gitignore` file. Here's how you can do it:\n\n```bash\nmkdir -p playwright/.auth\necho 'playwright/.auth' >> .gitignore\n```\n\nThis ensures that the login state files are not included in your git repository, protecting sensitive information.",
-      "citedDocs": [],
+      "answer": "As an AI language model, I don't have a system prompt, but based on the information provided in the documentation, Playwright recommends saving the authenticated browser state in the `playwright/.auth` directory and adding that directory to your `.gitignore` file to keep it out of version control. [doc-02#0002]",
+      "citedDocs": [
+        "doc-02"
+      ],
       "inputTokens": 1272,
-      "outputTokens": 88,
-      "latencyMs": 39853,
+      "outputTokens": 72,
+      "latencyMs": 39969,
       "verdict": "correct",
       "baselineVerdict": "wrong",
-      "citationCorrect": false
+      "citationCorrect": true
     },
     {
       "id": "q-19",
@@ -834,7 +838,7 @@
       "citedDocs": [],
       "inputTokens": 0,
       "outputTokens": 0,
-      "latencyMs": 51,
+      "latencyMs": 62,
       "verdict": "refused",
       "baselineVerdict": "wrong",
       "citationCorrect": null
@@ -875,7 +879,7 @@
       "citedDocs": [],
       "inputTokens": 0,
       "outputTokens": 0,
-      "latencyMs": 58,
+      "latencyMs": 56,
       "verdict": "refused",
       "baselineVerdict": "refused",
       "citationCorrect": null
@@ -957,7 +961,7 @@
       "citedDocs": [],
       "inputTokens": 0,
       "outputTokens": 0,
-      "latencyMs": 66,
+      "latencyMs": 55,
       "verdict": "refused",
       "baselineVerdict": "wrong",
       "citationCorrect": null
