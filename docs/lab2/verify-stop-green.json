@@ -1,0 +1,43 @@
+{
+  "judge": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+  "input": "docs/lab2/verify-input.diff",
+  "date": "2026-11-19T18:19:08.604Z",
+  "results": [
+    {
+      "id": "A1",
+      "verdict": "unknown",
+      "reason": "Дифф лише оновлює пороги у скрипті валідації, але не містить сам файл даних docs/lab2/golden/queries.jsonl або результат запуску перевірки. Неможливо перевірити фактичну кількість запитів та тегів.",
+      "evidence": ""
+    },
+    {
+      "id": "A2",
+      "verdict": "unknown",
+      "reason": "Змінено лише пороги підсумку у скрипті валідації, файл baseline.md не змінено і не представлений у дифі.",
+      "evidence": ""
+    },
+    {
+      "id": "A3",
+      "verdict": "unknown",
+      "reason": "Диф не містить eval-report.md ani таблиці розділу 3, тому неможливо порівняти результати з порогами.",
+      "evidence": ""
+    },
+    {
+      "id": "A4",
+      "verdict": "unknown",
+      "reason": "Змінений файл scripts/validate-golden.ts не стосується тесту retrieval.test.ts, який перевіряє наявність цитованих id у інвентарі.",
+      "evidence": ""
+    },
+    {
+      "id": "A5",
+      "verdict": "unknown",
+      "reason": "Диф зміщує лише пороги валідації у scripts/validate-golden.ts і не містить жодних даних про тести MCP-сервера, їх конфігурацію або запуск без мережі/ключів.",
+      "evidence": ""
+    },
+    {
+      "id": "A6",
+      "verdict": "unknown",
+      "reason": "Диф не містить інформації про статус CI/job verify у GitHub Actions.",
+      "evidence": ""
+    }
+  ]
+}
