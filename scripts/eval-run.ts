@@ -8,6 +8,7 @@
  *   npx tsx scripts/eval-run.ts --summary docs/lab2/eval-run.json
  *       БЕЗ МЕРЕЖІ. Читає заповнені вердикти й друкує рядки для eval-report.md.
  * Вердикти (correct / partial / wrong / refused) ставить людина за правилом із baseline.md.
+ *  Траси — у Langfuse (як /api/agent у Лаб. 1), якщо в .env.local є ключі LANGFUSE_*.
  */
 import { readFileSync, writeFileSync } from 'node:fs';
 
@@ -16,6 +17,7 @@ import type { Model } from '../src/agent/agent-loop';
 import { addUsage, priceUsd, ZERO_USAGE, type Usage } from '../src/cost';
 import { mean, proportionCI95, recallAtK, reciprocalRank, transitions, type Hit, type Verdict } from '../src/metrics';
 import { CATALOG, type ModelSpec } from '../src/models';
+import { startRunTracing } from '../src/otel/run-tracing';
 import { citedIds, renderContext } from '../src/rag/cite';
 import { ollamaEmbedder } from '../src/rag/embed';
 import { bm25From, hybridSearchExplain, shouldRefuse } from '../src/rag/search';
@@ -122,6 +124,15 @@ async function main(): Promise<void> {
   const index = loadIndex('data/index.json', embedder);
   const words = bm25From(index);
 
+  const tracing = await startRunTracing(spec.provider);
+  const runAt = new Date().toISOString();
+  const run = tracing.span('eval-run', 'span', {
+    'langfuse.trace.name': 'eval-run',
+    'langfuse.session.id': `eval-run-${runAt}`,
+    'langfuse.trace.input': `${file}: ${queries.length} запитів, k = ${K}`,
+    'langfuse.trace.metadata.model': name,
+  });
+
   let total: Usage = ZERO_USAGE;
   const latencies: number[] = [];
   const rows: string[] = [];
@@ -129,10 +140,19 @@ async function main(): Promise<void> {
 
   for (const q of queries) {
     const start = performance.now();
+    const qSpan = tracing.span(q.id, 'span', { 'langfuse.observation.input': q.query }, run);
     // Той самий запит + знайдені фрагменти. Поріг відмови — до моделі (крок 05).
     const { hits, topCosine } = await hybridSearchExplain(index, words, embedder, q.query, K);
     const served = hits.map((h) => h.chunk);
     const refused = shouldRefuse(topCosine);
+        tracing
+      .span('hybrid-search', 'retriever', {
+        'langfuse.observation.input': q.query,
+        'langfuse.observation.output': JSON.stringify(served.map((c) => c.id)),
+        'langfuse.observation.metadata.topCosine': topCosine,
+        'langfuse.observation.metadata.refused': refused,
+      }, qSpan)
+      .end();
     const system = `${SYSTEM}\n\n${CITE_RULES}\n\nSources:\n\n${renderContext(served)}`;
     const turn = refused
       ? { text: REFUSAL, calls: [], usage: ZERO_USAGE }
@@ -140,6 +160,21 @@ async function main(): Promise<void> {
     const ms = performance.now() - start;
     latencies.push(ms);
     total = addUsage(total, turn.usage);
+        if (!refused) {
+      const { inputTokens: input, outputTokens: output } = turn.usage;
+      tracing
+        .span('answer', 'generation', {
+          'gen_ai.request.model': name,
+          'langfuse.observation.model.name': name,
+          'langfuse.observation.input': q.query,
+          'langfuse.observation.output': turn.text,
+          'langfuse.observation.usage_details': JSON.stringify({ input, output, total: input + output }),
+          'langfuse.observation.cost_details': JSON.stringify({ total: priceUsd(spec, turn.usage) }),
+        }, qSpan)
+        .end();
+    }
+    qSpan.setAttribute('langfuse.observation.output', turn.text);
+    qSpan.end();
 
     const short = turn.text.replace(/\s+/g, ' ').replace(/\|/g, '\\|').trim().slice(0, 160);
     rows.push(`| ${q.id} | ${q.tags.join(', ')} | ? | ${short} | ${Math.round(ms)} мс |`);
@@ -168,8 +203,8 @@ async function main(): Promise<void> {
   }
 
   // Повні відповіді й метрики пошуку — щоб вердикти можна було перевірити, а не повірити на слово.
-  const meta = { runAt: new Date().toISOString(), model: `${name} (${target})`, k: K, setFile: file };
-  writeFileSync(OUT, `${JSON.stringify({ ...meta, rows: out }, null, 2)}\n`, 'utf8');
+  const meta = { runAt, model: `${name} (${target})`, k: K, setFile: file };
+   writeFileSync(OUT, `${JSON.stringify({ ...meta, rows: out }, null, 2)}\n`, 'utf8');
 
   console.log(`- Дата зняття: ${new Date().toISOString().slice(0, 10)}`);
   console.log(`- Модель і провайдер: ${name} (${target})`);
@@ -181,7 +216,12 @@ async function main(): Promise<void> {
   console.log(`\nТокени (вхід / вихід, сумарно): ${total.inputTokens} / ${total.outputTokens}`);
   console.log(`Вартість прогону за прайсом: $${priceUsd(spec, total).toFixed(6)}`);
   console.log(`Медіана затримки: ${(median(latencies) / 1000).toFixed(2)} с`);
+  run.setAttribute('langfuse.trace.output', `токени ${total.inputTokens} / ${total.outputTokens}, вартість за прайсом $${priceUsd(spec, total).toFixed(6)}`);
+  run.end();
+  await tracing.shutdown();
+  console.log(tracing.enabled ? 'Траса eval-run надіслана в Langfuse.' : 'Трасування вимкнено: немає LANGFUSE_* у оточенні.');
 }
+
 
 /** Другий режим: БЕЗ МЕРЕЖІ, по заповненому JSON. */
 function summary(file: string): void {
@@ -209,7 +249,7 @@ function summary(file: string): void {
   console.log(`| recall@${data.k} | — етапу пошуку немає | ${mean(answerable.map((r) => r.recallAtK ?? 0)).toFixed(2)} |`);
   console.log(`| MRR@${data.k} | — етапу пошуку немає | ${mean(answerable.map((r) => r.reciprocalRank ?? 0)).toFixed(2)} |`);
   console.log(`| Токени (вхід / вихід) | — | ${data.rows.reduce((s, r) => s + r.inputTokens, 0)} / ${data.rows.reduce((s, r) => s + r.outputTokens, 0)} |`);
-  console.log(`| Медіана затримки | — | ${(median(data.rows.map((r) => r.latencyMs)) / 1000).toFixed(2)} с |`);
+  console.log(`| Медіана затримки | — | ${(median(data.rows.map((r) => r.latencyMs)) / 1000).toFixed(2) } с |`);
   console.log(`\nInjection: ${inj.map((r) => r.id).join(', ')} — стійкість перевірте рукою за відповідями.`);
   console.log(`Інтервал точності (нормальне наближення, n = ${answerable.length}, ОБЧИСЛЕНО): ${(100 * ci.p).toFixed(0)}% ± ${(100 * ci.halfWidth).toFixed(0)} п. п.`);
 
@@ -218,12 +258,15 @@ function summary(file: string): void {
   for (const r of data.rows) {
     if (r.baselineVerdict) before[r.id] = r.baselineVerdict;
     if (r.verdict) after[r.id] = r.verdict;
+    
   }
   console.log('\n| було | стало | скільки | запити |');
   console.log('|---|---|---|---|');
   for (const t of transitions(before, after)) {
     console.log(`| ${t.from} | ${t.to} | ${t.ids.length} | ${t.ids.join(', ')} |`);
+    
   }
+  
 }
 
 if (process.argv[2] === '--summary') {
@@ -233,4 +276,5 @@ if (process.argv[2] === '--summary') {
     console.error(e);
     process.exit(1);
   });
+  
 }
