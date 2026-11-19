@@ -142,6 +142,21 @@
 | spec-kit або /plan | Ні |
 | Посилання | [mcp-spec.md](mcp-spec.md), [traces/mcp-inspector.md](traces/mcp-inspector.md), коміт `c6ff903` |
 
+## Сесія 9 · 2026-11-19 – 2026-11-20
+
+| Поле | Значення |
+|---|---|
+| Інструмент і модель | OpenCode 1.19.0 · Big Pickle (OpenCode Zen) як клієнт MCP; застосунок `scripts/mcp-demo.ts` (`@modelcontextprotocol/client` 2.4.0); сервер `lab2-corpus` з Ollama `embeddinggemma-2:270m` |
+| Режим дозволів | OpenCode — Build; агенту дозволено лише інструменти `lab2-corpus_*`, запит «нічого більше не роби»; сервер лише читає індекс |
+| Рівень довіри (L0–L5) | L1 |
+| Задача | Крок 09: підключити MCP-сервер до агента кодування і до застосунку |
+| Що агент запропонував | — |
+| Що агент виконав | `fetch_chunk doc-13#0001`, `search_corpus` (topK 3), `fetch_chunk doc-99#0000` → відмова |
+| Де і чому я втрутилася | Підключила сервер в `opencode.json` з міткою `opencode` і таймаутом 15 000 мс; клієнт SDK встановила сама. Помітила, що плагін журналу OpenCode не записав виклик із відмовою — доказом узяла журнал сервера |
+| Які докази прийняла | `mcp-calls.jsonl`: `opencode` — 2 × fetch_chunk, 1 × search_corpus; `lab2-app` — те саме; по одній відмові з кожного боку; `/mcp` → connected; `traces/mcp-app.txt` |
+| spec-kit або /plan | Ні |
+| Посилання | [mcp-integration.md](mcp-integration.md), [traces/mcp-opencode.md](traces/mcp-opencode.md) |
+
 ## Уточнення від 2026-11-14
 
 - У коміті `ffe5ce9` цей журнал потрапив без записів сесій; записи дописано окремим комітом.

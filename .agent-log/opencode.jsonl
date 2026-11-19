@@ -272,3 +272,5 @@
 {"ts":"2026-11-14T15:22:01.183Z","tool":"glob","input":{"pattern":".agent-log/**"},"result":"ok","session":"ses_e255979faffehjNbWZqYVDG5oU","source":"opencode"}
 {"ts":"2026-11-14T15:22:01.436Z","tool":"glob","input":{"pattern":"**/*.log"},"result":"ok","session":"ses_e255979faffehjNbWZqYVDG5oU","source":"opencode"}
 {"ts":"2026-11-14T15:22:10.254Z","tool":"task","input":{"subagent_type":"spec-auditor","description":"Relay verbatim question"},"result":"ok","session":"ses_e255fa988fferhqhi90KZchHlo","source":"opencode"}
+{"ts":"2026-11-19T23:20:50.278Z","tool":"lab2-corpus_fetch_chunk","input":{},"result":"ok","session":"ses_e09e334b6ffebsqKY9eFCqY1If","source":"opencode"}
+{"ts":"2026-11-19T23:20:56.948Z","tool":"lab2-corpus_search_corpus","input":{},"result":"ok","session":"ses_e09e334b6ffebsqKY9eFCqY1If","source":"opencode"}

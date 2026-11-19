@@ -1,3 +1,9 @@
 {"ts":"2026-11-19T23:08:14.502Z","source":"unknown","tool":"search_corpus","args":{"query":"how to open the inspector with debug","topK":5},"result":"ok","hits":5}
 {"ts":"2026-11-19T23:08:20.427Z","source":"unknown","tool":"fetch_chunk","args":{"id":"doc-99#0000"},"result":"refused","why":"Error: фрагмента doc-99#0000 немає в індексі"}
 {"ts":"2026-11-19T23:08:34.054Z","source":"unknown","tool":"fetch_chunk","args":{"id":"doc-99#0000"},"result":"refused","why":"Error: фрагмента doc-99#0000 немає в індексі"}
+{"ts":"2026-11-19T23:20:50.268Z","source":"opencode","tool":"fetch_chunk","args":{"id":"doc-13#0001"},"result":"ok"}
+{"ts":"2026-11-19T23:20:56.934Z","source":"opencode","tool":"search_corpus","args":{"query":"What is the default test timeout in Playwright?","topK":3},"result":"ok","hits":3}
+{"ts":"2026-11-19T23:21:02.108Z","source":"opencode","tool":"fetch_chunk","args":{"id":"doc-99#0000"},"result":"refused","why":"Error: фрагмента doc-99#0000 немає в індексі"}
+{"ts":"2026-11-19T23:23:02.271Z","source":"lab2-app","tool":"search_corpus","args":{"query":"What is the default test timeout in Playwright?","topK":3},"result":"ok","hits":3}
+{"ts":"2026-11-19T23:23:02.280Z","source":"lab2-app","tool":"fetch_chunk","args":{"id":"doc-13#0001"},"result":"ok"}
+{"ts":"2026-11-19T23:23:02.282Z","source":"lab2-app","tool":"fetch_chunk","args":{"id":"doc-99#0000"},"result":"refused","why":"Error: фрагмента doc-99#0000 немає в індексі"}
