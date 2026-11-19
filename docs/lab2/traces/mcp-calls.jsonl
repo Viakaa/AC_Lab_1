@@ -1,0 +1,3 @@
+{"ts":"2026-11-19T23:08:14.502Z","source":"unknown","tool":"search_corpus","args":{"query":"how to open the inspector with debug","topK":5},"result":"ok","hits":5}
+{"ts":"2026-11-19T23:08:20.427Z","source":"unknown","tool":"fetch_chunk","args":{"id":"doc-99#0000"},"result":"refused","why":"Error: фрагмента doc-99#0000 немає в індексі"}
+{"ts":"2026-11-19T23:08:34.054Z","source":"unknown","tool":"fetch_chunk","args":{"id":"doc-99#0000"},"result":"refused","why":"Error: фрагмента doc-99#0000 немає в індексі"}

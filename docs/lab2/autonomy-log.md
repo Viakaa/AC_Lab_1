@@ -127,6 +127,21 @@
 | spec-kit або /plan | Ні |
 | Посилання | [budget.md](budget.md), [parallel-run.json](parallel-run.json) |
 
+## Сесія 8 · 2026-11-20
+
+| Поле | Значення |
+|---|---|
+| Інструмент і модель | MCP-сервер `lab2-corpus` (`@modelcontextprotocol/server` 2.4.0) · Ollama `embeddinggemma-2:270m` для запиту; клієнт — `@modelcontextprotocol/inspector` 2.13.0; верифікатор — `nvidia/nemotron-3-ultra-550b-a55b:free` |
+| Режим дозволів | сервер лише читає `data/index.json` і дописує рядок у `traces/mcp-calls.jsonl`; шляхів на вхід не приймає |
+| Рівень довіри (L0–L5) | L1 · виклики інструментів робить клієнт, межі — у коді сервера |
+| Задача | Крок 08: MCP-сервер за специфікацією `mcp-spec.md` |
+| Що агент запропонував | — (Inspector лише викликає інструменти) |
+| Що агент виконав | `tools/list`, `search_corpus` («how to open the inspector with debug» → 5 фрагментів, перший `doc-04#0009`), `fetch_chunk` (`doc-99#0000` → відмова) |
+| Де і чому я втрутилася | Специфікацію закомітила до коду (`6309463` раніше за `c6ff903`). SDK встановила сама (`npm install @modelcontextprotocol/server`, 2.4.0 замість 2.3.1 з курсу — API той самий). `--method initialize` з посібника Inspector не використала: ревізія 2026-07-28 його прибрала |
+| Які докази прийняла | `tests/mcp.test.ts` — 4 passed (зокрема відмова на `../../.env`, `doc-99#0000`, таймаут); stdout сервера чистий; Inspector: `isError: true`, `tool_is_error` |
+| spec-kit або /plan | Ні |
+| Посилання | [mcp-spec.md](mcp-spec.md), [traces/mcp-inspector.md](traces/mcp-inspector.md), коміт `c6ff903` |
+
 ## Уточнення від 2026-11-14
 
 - У коміті `ffe5ce9` цей журнал потрапив без записів сесій; записи дописано окремим комітом.

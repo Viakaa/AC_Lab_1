@@ -1,0 +1,43 @@
+{
+  "judge": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+  "input": "docs/lab2/verify-input.diff",
+  "date": "2026-11-19T23:12:43.508Z",
+  "results": [
+    {
+      "id": "A1",
+      "verdict": "unknown",
+      "reason": "Диф не містить файлу еталонних запитів docs/lab2/golden/queries.jsonl ні скрипта валідації scripts/validate-golden.ts, тому неможливо перевірити критерій.",
+      "evidence": ""
+    },
+    {
+      "id": "A2",
+      "verdict": "unknown",
+      "reason": "У дифі відсутні зміни до `docs/lab2/baseline.md` та до набору запитів, тому неможливо перевірити наявність таблиці вердиктів з правильною кількістю рядків.",
+      "evidence": ""
+    },
+    {
+      "id": "A3",
+      "verdict": "unknown",
+      "reason": "У дифі відсутній файл eval-report.md з числовими показниками якості пошуку, а також пороги з таблиці розділу 3. Критерій вимагає порівняння цих даних, яких немає в змінах.",
+      "evidence": ""
+    },
+    {
+      "id": "A4",
+      "verdict": "unknown",
+      "reason": "Диф не містить файл `tests/retrieval.test.ts`, який за критерієм є перевіркою. З’явився новий `tests/mcp.test.ts`, але це інший артефакт.",
+      "evidence": ""
+    },
+    {
+      "id": "A5",
+      "verdict": "pass",
+      "reason": "Тести MCP-сервера використовують fakeEmbedder та локальні фікстури, не вимагають мережі чи ключів.",
+      "evidence": "tests/mcp.test.ts:6: import { fakeEmbedder } from '../src/rag/embed';\\ntests/mcp.test.ts:9: const embedder = fakeEmbedder();\\ntests/mcp.test.ts:11-28: fixture() створює індекс за допомогою fakeEmbedder без мережевих викликів."
+    },
+    {
+      "id": "A6",
+      "verdict": "unknown",
+      "reason": "Даний diff не містить жодної інформації про статус CI, GitHub Actions workflow файли чи результати job verify. Критерій вимагає перевірки CI на останньому коміті main, що неможливо визначити з наданого diff.",
+      "evidence": ""
+    }
+  ]
+}

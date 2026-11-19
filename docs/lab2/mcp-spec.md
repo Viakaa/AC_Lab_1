@@ -41,4 +41,8 @@
 ## Історія версій
 | Дата | Що змінилося у специфікації | Коміт |
 |---|---|---|
-| 2026-11-20 | v1: інструменти `search_corpus`, `fetch_chunk`, межі й правила безпеки | (цей коміт) |
+| 2026-11-20 | v1: інструменти `search_corpus`, `fetch_chunk`, межі й правила безпеки | c6ff903 |
+| 2026-11-20 | код сервера за v1 без змін специфікації; smoke-тест Inspector пройдено | c6ff903 |
+
+## Smoke-тест Inspector
+Пройдено 2026-11-20 без ключів API — [traces/mcp-inspector.md](traces/mcp-inspector.md): `tools/list` (ера modern) показує обидва інструменти з межами схеми; `search_corpus` повертає 5 фрагментів із цитатами; `fetch_chunk` з `doc-99#0000` — відмова `isError: true`, `tool_is_error`. Кожен виклик записано в [traces/mcp-calls.jsonl](traces/mcp-calls.jsonl) з `source: inspector`.
