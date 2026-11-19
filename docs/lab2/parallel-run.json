@@ -1,0 +1,2251 @@
+{
+  "runs": [
+    {
+      "runAt": "2026-11-19T20:51:50.981Z",
+      "model": "qwen2.5-coder:7b (Ollama /api/chat)",
+      "budget": {
+        "maxBranches": 1,
+        "maxTokens": 50000,
+        "maxWallMs": 1200000
+      },
+      "wallMs": 602736,
+      "sumBranchMs": 602735,
+      "inputTokens": 19964,
+      "outputTokens": 1281,
+      "costUsd": 0,
+      "ollama": {
+        "sumTotalMs": 598880,
+        "sumLoadMs": 225,
+        "sumPromptEvalCount": 19964,
+        "sumEvalCount": 1281
+      },
+      "done": 22,
+      "refused": 5,
+      "failed": [],
+      "stoppedEarly": false,
+      "branches": [
+        {
+          "id": "q-01",
+          "refused": false,
+          "inputTokens": 1270,
+          "outputTokens": 32,
+          "ms": 3940,
+          "ollama": {
+            "totalMs": 3536,
+            "loadMs": 15,
+            "promptEvalMs": 149,
+            "evalMs": 3354,
+            "promptEvalCount": 1270,
+            "evalCount": 32
+          }
+        },
+        {
+          "id": "q-02",
+          "refused": false,
+          "inputTokens": 1214,
+          "outputTokens": 21,
+          "ms": 2519,
+          "ollama": {
+            "totalMs": 2349,
+            "loadMs": 9,
+            "promptEvalMs": 115,
+            "evalMs": 2158,
+            "promptEvalCount": 1214,
+            "evalCount": 21
+          }
+        },
+        {
+          "id": "q-03",
+          "refused": false,
+          "inputTokens": 1162,
+          "outputTokens": 48,
+          "ms": 30312,
+          "ollama": {
+            "totalMs": 30224,
+            "loadMs": 7,
+            "promptEvalMs": 25191,
+            "evalMs": 4921,
+            "promptEvalCount": 1162,
+            "evalCount": 48
+          }
+        },
+        {
+          "id": "q-04",
+          "refused": false,
+          "inputTokens": 1186,
+          "outputTokens": 98,
+          "ms": 39671,
+          "ollama": {
+            "totalMs": 39581,
+            "loadMs": 9,
+            "promptEvalMs": 27492,
+            "evalMs": 12015,
+            "promptEvalCount": 1186,
+            "evalCount": 98
+          }
+        },
+        {
+          "id": "q-05",
+          "refused": false,
+          "inputTokens": 1090,
+          "outputTokens": 110,
+          "ms": 41574,
+          "ollama": {
+            "totalMs": 41468,
+            "loadMs": 11,
+            "promptEvalMs": 27818,
+            "evalMs": 13556,
+            "promptEvalCount": 1090,
+            "evalCount": 110
+          }
+        },
+        {
+          "id": "q-06",
+          "refused": false,
+          "inputTokens": 1245,
+          "outputTokens": 36,
+          "ms": 39304,
+          "ollama": {
+            "totalMs": 39180,
+            "loadMs": 11,
+            "promptEvalMs": 34609,
+            "evalMs": 4484,
+            "promptEvalCount": 1245,
+            "evalCount": 36
+          }
+        },
+        {
+          "id": "q-07",
+          "refused": false,
+          "inputTokens": 1289,
+          "outputTokens": 31,
+          "ms": 40130,
+          "ollama": {
+            "totalMs": 40004,
+            "loadMs": 15,
+            "promptEvalMs": 35346,
+            "evalMs": 4548,
+            "promptEvalCount": 1289,
+            "evalCount": 31
+          }
+        },
+        {
+          "id": "q-08",
+          "refused": false,
+          "inputTokens": 915,
+          "outputTokens": 28,
+          "ms": 29411,
+          "ollama": {
+            "totalMs": 29276,
+            "loadMs": 16,
+            "promptEvalMs": 25686,
+            "evalMs": 3390,
+            "promptEvalCount": 915,
+            "evalCount": 28
+          }
+        },
+        {
+          "id": "q-09",
+          "refused": false,
+          "inputTokens": 1412,
+          "outputTokens": 22,
+          "ms": 40536,
+          "ollama": {
+            "totalMs": 40388,
+            "loadMs": 14,
+            "promptEvalMs": 37593,
+            "evalMs": 2696,
+            "promptEvalCount": 1412,
+            "evalCount": 22
+          }
+        },
+        {
+          "id": "q-10",
+          "refused": false,
+          "inputTokens": 1102,
+          "outputTokens": 36,
+          "ms": 33564,
+          "ollama": {
+            "totalMs": 33468,
+            "loadMs": 14,
+            "promptEvalMs": 28119,
+            "evalMs": 5225,
+            "promptEvalCount": 1102,
+            "evalCount": 36
+          }
+        },
+        {
+          "id": "q-11",
+          "refused": false,
+          "inputTokens": 1113,
+          "outputTokens": 132,
+          "ms": 46527,
+          "ollama": {
+            "totalMs": 46338,
+            "loadMs": 13,
+            "promptEvalMs": 29686,
+            "evalMs": 16557,
+            "promptEvalCount": 1113,
+            "evalCount": 132
+          }
+        },
+        {
+          "id": "q-12",
+          "refused": false,
+          "inputTokens": 1392,
+          "outputTokens": 195,
+          "ms": 58334,
+          "ollama": {
+            "totalMs": 58164,
+            "loadMs": 18,
+            "promptEvalMs": 35750,
+            "evalMs": 22329,
+            "promptEvalCount": 1392,
+            "evalCount": 195
+          }
+        },
+        {
+          "id": "q-13",
+          "refused": false,
+          "inputTokens": 1005,
+          "outputTokens": 88,
+          "ms": 33703,
+          "ollama": {
+            "totalMs": 32598,
+            "loadMs": 27,
+            "promptEvalMs": 23050,
+            "evalMs": 9397,
+            "promptEvalCount": 1005,
+            "evalCount": 88
+          }
+        },
+        {
+          "id": "q-14",
+          "refused": false,
+          "inputTokens": 1063,
+          "outputTokens": 210,
+          "ms": 49946,
+          "ollama": {
+            "totalMs": 49784,
+            "loadMs": 7,
+            "promptEvalMs": 24597,
+            "evalMs": 25135,
+            "promptEvalCount": 1063,
+            "evalCount": 210
+          }
+        },
+        {
+          "id": "q-15",
+          "refused": false,
+          "inputTokens": 880,
+          "outputTokens": 161,
+          "ms": 40942,
+          "ollama": {
+            "totalMs": 40826,
+            "loadMs": 15,
+            "promptEvalMs": 21842,
+            "evalMs": 18921,
+            "promptEvalCount": 880,
+            "evalCount": 161
+          }
+        },
+        {
+          "id": "q-16",
+          "refused": true,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "ms": 128,
+          "ollama": null
+        },
+        {
+          "id": "q-17",
+          "refused": false,
+          "inputTokens": 1354,
+          "outputTokens": 4,
+          "ms": 35744,
+          "ollama": {
+            "totalMs": 35612,
+            "loadMs": 10,
+            "promptEvalMs": 35196,
+            "evalMs": 353,
+            "promptEvalCount": 1354,
+            "evalCount": 4
+          }
+        },
+        {
+          "id": "q-18",
+          "refused": false,
+          "inputTokens": 1272,
+          "outputTokens": 29,
+          "ms": 36205,
+          "ollama": {
+            "totalMs": 36084,
+            "loadMs": 14,
+            "promptEvalMs": 32560,
+            "evalMs": 3453,
+            "promptEvalCount": 1272,
+            "evalCount": 29
+          }
+        },
+        {
+          "id": "q-19",
+          "refused": true,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "ms": 60,
+          "ollama": null
+        },
+        {
+          "id": "q-20",
+          "refused": true,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "ms": 68,
+          "ollama": null
+        },
+        {
+          "id": "q-21",
+          "refused": true,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "ms": 59,
+          "ollama": null
+        },
+        {
+          "id": "q-22",
+          "refused": true,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "ms": 58,
+          "ollama": null
+        }
+      ]
+    },
+    {
+      "runAt": "2026-11-19T20:56:43.934Z",
+      "model": "qwen2.5-coder:7b (Ollama /api/chat)",
+      "budget": {
+        "maxBranches": 2,
+        "maxTokens": 50000,
+        "maxWallMs": 1200000
+      },
+      "wallMs": 188493,
+      "sumBranchMs": 370699,
+      "inputTokens": 19964,
+      "outputTokens": 1610,
+      "costUsd": 0,
+      "ollama": {
+        "sumTotalMs": 368594,
+        "sumLoadMs": 204,
+        "sumPromptEvalCount": 19964,
+        "sumEvalCount": 1610
+      },
+      "done": 22,
+      "refused": 5,
+      "failed": [],
+      "stoppedEarly": false,
+      "branches": [
+        {
+          "id": "q-01",
+          "refused": false,
+          "inputTokens": 1270,
+          "outputTokens": 28,
+          "ms": 4173,
+          "ollama": {
+            "totalMs": 4011,
+            "loadMs": 13,
+            "promptEvalMs": 190,
+            "evalMs": 3307,
+            "promptEvalCount": 1270,
+            "evalCount": 28
+          }
+        },
+        {
+          "id": "q-02",
+          "refused": false,
+          "inputTokens": 1214,
+          "outputTokens": 32,
+          "ms": 7964,
+          "ollama": {
+            "totalMs": 7810,
+            "loadMs": 9,
+            "promptEvalMs": 117,
+            "evalMs": 3289,
+            "promptEvalCount": 1214,
+            "evalCount": 32
+          }
+        },
+        {
+          "id": "q-03",
+          "refused": false,
+          "inputTokens": 1162,
+          "outputTokens": 40,
+          "ms": 8363,
+          "ollama": {
+            "totalMs": 8242,
+            "loadMs": 11,
+            "promptEvalMs": 114,
+            "evalMs": 4086,
+            "promptEvalCount": 1162,
+            "evalCount": 40
+          }
+        },
+        {
+          "id": "q-04",
+          "refused": false,
+          "inputTokens": 1186,
+          "outputTokens": 142,
+          "ms": 20168,
+          "ollama": {
+            "totalMs": 20104,
+            "loadMs": 11,
+            "promptEvalMs": 113,
+            "evalMs": 14978,
+            "promptEvalCount": 1186,
+            "evalCount": 142
+          }
+        },
+        {
+          "id": "q-05",
+          "refused": false,
+          "inputTokens": 1090,
+          "outputTokens": 79,
+          "ms": 24649,
+          "ollama": {
+            "totalMs": 24583,
+            "loadMs": 9,
+            "promptEvalMs": 112,
+            "evalMs": 8530,
+            "promptEvalCount": 1090,
+            "evalCount": 79
+          }
+        },
+        {
+          "id": "q-06",
+          "refused": false,
+          "inputTokens": 1245,
+          "outputTokens": 36,
+          "ms": 14280,
+          "ollama": {
+            "totalMs": 14179,
+            "loadMs": 11,
+            "promptEvalMs": 115,
+            "evalMs": 4531,
+            "promptEvalCount": 1245,
+            "evalCount": 36
+          }
+        },
+        {
+          "id": "q-07",
+          "refused": false,
+          "inputTokens": 1289,
+          "outputTokens": 140,
+          "ms": 21457,
+          "ollama": {
+            "totalMs": 21376,
+            "loadMs": 16,
+            "promptEvalMs": 118,
+            "evalMs": 15619,
+            "promptEvalCount": 1289,
+            "evalCount": 140
+          }
+        },
+        {
+          "id": "q-08",
+          "refused": false,
+          "inputTokens": 915,
+          "outputTokens": 35,
+          "ms": 20279,
+          "ollama": {
+            "totalMs": 20190,
+            "loadMs": 10,
+            "promptEvalMs": 114,
+            "evalMs": 3623,
+            "promptEvalCount": 915,
+            "evalCount": 35
+          }
+        },
+        {
+          "id": "q-09",
+          "refused": false,
+          "inputTokens": 1412,
+          "outputTokens": 23,
+          "ms": 7166,
+          "ollama": {
+            "totalMs": 7088,
+            "loadMs": 12,
+            "promptEvalMs": 117,
+            "evalMs": 2503,
+            "promptEvalCount": 1412,
+            "evalCount": 23
+          }
+        },
+        {
+          "id": "q-10",
+          "refused": false,
+          "inputTokens": 1102,
+          "outputTokens": 38,
+          "ms": 7734,
+          "ollama": {
+            "totalMs": 7663,
+            "loadMs": 11,
+            "promptEvalMs": 118,
+            "evalMs": 4088,
+            "promptEvalCount": 1102,
+            "evalCount": 38
+          }
+        },
+        {
+          "id": "q-11",
+          "refused": false,
+          "inputTokens": 1113,
+          "outputTokens": 136,
+          "ms": 20221,
+          "ollama": {
+            "totalMs": 20125,
+            "loadMs": 13,
+            "promptEvalMs": 117,
+            "evalMs": 15039,
+            "promptEvalCount": 1113,
+            "evalCount": 136
+          }
+        },
+        {
+          "id": "q-12",
+          "refused": false,
+          "inputTokens": 1392,
+          "outputTokens": 145,
+          "ms": 32300,
+          "ollama": {
+            "totalMs": 32213,
+            "loadMs": 11,
+            "promptEvalMs": 119,
+            "evalMs": 16060,
+            "promptEvalCount": 1392,
+            "evalCount": 145
+          }
+        },
+        {
+          "id": "q-13",
+          "refused": false,
+          "inputTokens": 1005,
+          "outputTokens": 144,
+          "ms": 32687,
+          "ollama": {
+            "totalMs": 32581,
+            "loadMs": 15,
+            "promptEvalMs": 110,
+            "evalMs": 15505,
+            "promptEvalCount": 1005,
+            "evalCount": 144
+          }
+        },
+        {
+          "id": "q-14",
+          "refused": false,
+          "inputTokens": 1063,
+          "outputTokens": 477,
+          "ms": 71322,
+          "ollama": {
+            "totalMs": 71217,
+            "loadMs": 14,
+            "promptEvalMs": 120,
+            "evalMs": 54843,
+            "promptEvalCount": 1063,
+            "evalCount": 477
+          }
+        },
+        {
+          "id": "q-15",
+          "refused": false,
+          "inputTokens": 880,
+          "outputTokens": 51,
+          "ms": 61515,
+          "ollama": {
+            "totalMs": 61449,
+            "loadMs": 13,
+            "promptEvalMs": 122,
+            "evalMs": 5590,
+            "promptEvalCount": 880,
+            "evalCount": 51
+          }
+        },
+        {
+          "id": "q-16",
+          "refused": true,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "ms": 119,
+          "ollama": null
+        },
+        {
+          "id": "q-17",
+          "refused": false,
+          "inputTokens": 1354,
+          "outputTokens": 13,
+          "ms": 7719,
+          "ollama": {
+            "totalMs": 7609,
+            "loadMs": 13,
+            "promptEvalMs": 132,
+            "evalMs": 1355,
+            "promptEvalCount": 1354,
+            "evalCount": 13
+          }
+        },
+        {
+          "id": "q-18",
+          "refused": false,
+          "inputTokens": 1272,
+          "outputTokens": 51,
+          "ms": 8263,
+          "ollama": {
+            "totalMs": 8154,
+            "loadMs": 12,
+            "promptEvalMs": 137,
+            "evalMs": 6390,
+            "promptEvalCount": 1272,
+            "evalCount": 51
+          }
+        },
+        {
+          "id": "q-19",
+          "refused": true,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "ms": 68,
+          "ollama": null
+        },
+        {
+          "id": "q-20",
+          "refused": true,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "ms": 87,
+          "ollama": null
+        },
+        {
+          "id": "q-21",
+          "refused": true,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "ms": 66,
+          "ollama": null
+        },
+        {
+          "id": "q-22",
+          "refused": true,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "ms": 99,
+          "ollama": null
+        }
+      ]
+    },
+    {
+      "runAt": "2026-11-19T22:37:24.211Z",
+      "model": "qwen2.5-coder:7b (Ollama /api/chat)",
+      "budget": {
+        "maxBranches": 4,
+        "maxTokens": 50000,
+        "maxWallMs": 1200000
+      },
+      "wallMs": 710025,
+      "sumBranchMs": 2641038,
+      "inputTokens": 19964,
+      "outputTokens": 1769,
+      "costUsd": 0,
+      "ollama": {
+        "sumTotalMs": 2626909,
+        "sumLoadMs": 55451,
+        "sumPromptEvalCount": 19964,
+        "sumEvalCount": 1769
+      },
+      "done": 22,
+      "refused": 5,
+      "failed": [],
+      "stoppedEarly": false,
+      "branches": [
+        {
+          "id": "q-01",
+          "refused": false,
+          "inputTokens": 1270,
+          "outputTokens": 33,
+          "ms": 56057,
+          "ollama": {
+            "totalMs": 53232,
+            "loadMs": 13813,
+            "promptEvalMs": 35546,
+            "evalMs": 3811,
+            "promptEvalCount": 1270,
+            "evalCount": 33
+          }
+        },
+        {
+          "id": "q-02",
+          "refused": false,
+          "inputTokens": 1214,
+          "outputTokens": 22,
+          "ms": 129384,
+          "ollama": {
+            "totalMs": 126540,
+            "loadMs": 13755,
+            "promptEvalMs": 32303,
+            "evalMs": 2518,
+            "promptEvalCount": 1214,
+            "evalCount": 22
+          }
+        },
+        {
+          "id": "q-03",
+          "refused": false,
+          "inputTokens": 1162,
+          "outputTokens": 81,
+          "ms": 94503,
+          "ollama": {
+            "totalMs": 91702,
+            "loadMs": 13786,
+            "promptEvalMs": 29344,
+            "evalMs": 9107,
+            "promptEvalCount": 1162,
+            "evalCount": 81
+          }
+        },
+        {
+          "id": "q-04",
+          "refused": false,
+          "inputTokens": 1186,
+          "outputTokens": 105,
+          "ms": 173781,
+          "ollama": {
+            "totalMs": 171008,
+            "loadMs": 13812,
+            "promptEvalMs": 32120,
+            "evalMs": 12151,
+            "promptEvalCount": 1186,
+            "evalCount": 105
+          }
+        },
+        {
+          "id": "q-05",
+          "refused": false,
+          "inputTokens": 1090,
+          "outputTokens": 129,
+          "ms": 158614,
+          "ollama": {
+            "totalMs": 158379,
+            "loadMs": 21,
+            "promptEvalMs": 26539,
+            "evalMs": 14296,
+            "promptEvalCount": 1090,
+            "evalCount": 129
+          }
+        },
+        {
+          "id": "q-06",
+          "refused": false,
+          "inputTokens": 1245,
+          "outputTokens": 36,
+          "ms": 158005,
+          "ollama": {
+            "totalMs": 157741,
+            "loadMs": 22,
+            "promptEvalMs": 34005,
+            "evalMs": 3807,
+            "promptEvalCount": 1245,
+            "evalCount": 36
+          }
+        },
+        {
+          "id": "q-07",
+          "refused": false,
+          "inputTokens": 1289,
+          "outputTokens": 117,
+          "ms": 168706,
+          "ollama": {
+            "totalMs": 168075,
+            "loadMs": 97,
+            "promptEvalMs": 32436,
+            "evalMs": 13106,
+            "promptEvalCount": 1289,
+            "evalCount": 117
+          }
+        },
+        {
+          "id": "q-08",
+          "refused": false,
+          "inputTokens": 915,
+          "outputTokens": 70,
+          "ms": 154093,
+          "ollama": {
+            "totalMs": 153927,
+            "loadMs": 26,
+            "promptEvalMs": 21855,
+            "evalMs": 7893,
+            "promptEvalCount": 915,
+            "evalCount": 70
+          }
+        },
+        {
+          "id": "q-09",
+          "refused": false,
+          "inputTokens": 1412,
+          "outputTokens": 22,
+          "ms": 149878,
+          "ollama": {
+            "totalMs": 149732,
+            "loadMs": 20,
+            "promptEvalMs": 34360,
+            "evalMs": 2268,
+            "promptEvalCount": 1412,
+            "evalCount": 22
+          }
+        },
+        {
+          "id": "q-10",
+          "refused": false,
+          "inputTokens": 1102,
+          "outputTokens": 40,
+          "ms": 141305,
+          "ollama": {
+            "totalMs": 141228,
+            "loadMs": 11,
+            "promptEvalMs": 25125,
+            "evalMs": 4115,
+            "promptEvalCount": 1102,
+            "evalCount": 40
+          }
+        },
+        {
+          "id": "q-11",
+          "refused": false,
+          "inputTokens": 1113,
+          "outputTokens": 155,
+          "ms": 138391,
+          "ollama": {
+            "totalMs": 138227,
+            "loadMs": 12,
+            "promptEvalMs": 26264,
+            "evalMs": 16368,
+            "promptEvalCount": 1113,
+            "evalCount": 155
+          }
+        },
+        {
+          "id": "q-12",
+          "refused": false,
+          "inputTokens": 1392,
+          "outputTokens": 327,
+          "ms": 179931,
+          "ollama": {
+            "totalMs": 179780,
+            "loadMs": 13,
+            "promptEvalMs": 34888,
+            "evalMs": 36386,
+            "promptEvalCount": 1392,
+            "evalCount": 327
+          }
+        },
+        {
+          "id": "q-13",
+          "refused": false,
+          "inputTokens": 1005,
+          "outputTokens": 263,
+          "ms": 195710,
+          "ollama": {
+            "totalMs": 195580,
+            "loadMs": 13,
+            "promptEvalMs": 23869,
+            "evalMs": 28542,
+            "promptEvalCount": 1005,
+            "evalCount": 263
+          }
+        },
+        {
+          "id": "q-14",
+          "refused": false,
+          "inputTokens": 1063,
+          "outputTokens": 216,
+          "ms": 215229,
+          "ollama": {
+            "totalMs": 215105,
+            "loadMs": 9,
+            "promptEvalMs": 25236,
+            "evalMs": 23515,
+            "promptEvalCount": 1063,
+            "evalCount": 216
+          }
+        },
+        {
+          "id": "q-15",
+          "refused": false,
+          "inputTokens": 880,
+          "outputTokens": 136,
+          "ms": 207459,
+          "ollama": {
+            "totalMs": 207378,
+            "loadMs": 16,
+            "promptEvalMs": 20582,
+            "evalMs": 14278,
+            "promptEvalCount": 880,
+            "evalCount": 136
+          }
+        },
+        {
+          "id": "q-16",
+          "refused": true,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "ms": 136,
+          "ollama": null
+        },
+        {
+          "id": "q-17",
+          "refused": false,
+          "inputTokens": 1354,
+          "outputTokens": 4,
+          "ms": 169766,
+          "ollama": {
+            "totalMs": 169631,
+            "loadMs": 13,
+            "promptEvalMs": 33366,
+            "evalMs": 353,
+            "promptEvalCount": 1354,
+            "evalCount": 4
+          }
+        },
+        {
+          "id": "q-18",
+          "refused": false,
+          "inputTokens": 1272,
+          "outputTokens": 13,
+          "ms": 149766,
+          "ollama": {
+            "totalMs": 149644,
+            "loadMs": 12,
+            "promptEvalMs": 30971,
+            "evalMs": 1287,
+            "promptEvalCount": 1272,
+            "evalCount": 13
+          }
+        },
+        {
+          "id": "q-19",
+          "refused": true,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "ms": 53,
+          "ollama": null
+        },
+        {
+          "id": "q-20",
+          "refused": true,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "ms": 75,
+          "ollama": null
+        },
+        {
+          "id": "q-21",
+          "refused": true,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "ms": 96,
+          "ollama": null
+        },
+        {
+          "id": "q-22",
+          "refused": true,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "ms": 100,
+          "ollama": null
+        }
+      ]
+    },
+    {
+      "runAt": "2026-11-19T22:41:50.210Z",
+      "model": "qwen2.5-coder:7b (Ollama /api/chat)",
+      "budget": {
+        "maxBranches": 8,
+        "maxTokens": 50000,
+        "maxWallMs": 1200000
+      },
+      "wallMs": 240355,
+      "sumBranchMs": 1586900,
+      "inputTokens": 19964,
+      "outputTokens": 1631,
+      "costUsd": 0,
+      "ollama": {
+        "sumTotalMs": 1583446,
+        "sumLoadMs": 206,
+        "sumPromptEvalCount": 19964,
+        "sumEvalCount": 1631
+      },
+      "done": 22,
+      "refused": 5,
+      "failed": [],
+      "stoppedEarly": false,
+      "branches": [
+        {
+          "id": "q-01",
+          "refused": false,
+          "inputTokens": 1270,
+          "outputTokens": 32,
+          "ms": 34936,
+          "ollama": {
+            "totalMs": 34722,
+            "loadMs": 10,
+            "promptEvalMs": 130,
+            "evalMs": 3451,
+            "promptEvalCount": 1270,
+            "evalCount": 32
+          }
+        },
+        {
+          "id": "q-02",
+          "refused": false,
+          "inputTokens": 1214,
+          "outputTokens": 32,
+          "ms": 54460,
+          "ollama": {
+            "totalMs": 54084,
+            "loadMs": 14,
+            "promptEvalMs": 128,
+            "evalMs": 3482,
+            "promptEvalCount": 1214,
+            "evalCount": 32
+          }
+        },
+        {
+          "id": "q-03",
+          "refused": false,
+          "inputTokens": 1162,
+          "outputTokens": 104,
+          "ms": 66274,
+          "ollama": {
+            "totalMs": 65829,
+            "loadMs": 11,
+            "promptEvalMs": 129,
+            "evalMs": 11623,
+            "promptEvalCount": 1162,
+            "evalCount": 104
+          }
+        },
+        {
+          "id": "q-04",
+          "refused": false,
+          "inputTokens": 1186,
+          "outputTokens": 108,
+          "ms": 50781,
+          "ollama": {
+            "totalMs": 50478,
+            "loadMs": 11,
+            "promptEvalMs": 138,
+            "evalMs": 11929,
+            "promptEvalCount": 1186,
+            "evalCount": 108
+          }
+        },
+        {
+          "id": "q-05",
+          "refused": false,
+          "inputTokens": 1090,
+          "outputTokens": 117,
+          "ms": 31283,
+          "ollama": {
+            "totalMs": 31103,
+            "loadMs": 12,
+            "promptEvalMs": 122,
+            "evalMs": 12657,
+            "promptEvalCount": 1090,
+            "evalCount": 117
+          }
+        },
+        {
+          "id": "q-06",
+          "refused": false,
+          "inputTokens": 1245,
+          "outputTokens": 34,
+          "ms": 4172,
+          "ollama": {
+            "totalMs": 4023,
+            "loadMs": 8,
+            "promptEvalMs": 174,
+            "evalMs": 3747,
+            "promptEvalCount": 1245,
+            "evalCount": 34
+          }
+        },
+        {
+          "id": "q-07",
+          "refused": false,
+          "inputTokens": 1289,
+          "outputTokens": 126,
+          "ms": 18446,
+          "ollama": {
+            "totalMs": 18299,
+            "loadMs": 9,
+            "promptEvalMs": 133,
+            "evalMs": 14074,
+            "promptEvalCount": 1289,
+            "evalCount": 126
+          }
+        },
+        {
+          "id": "q-08",
+          "refused": false,
+          "inputTokens": 915,
+          "outputTokens": 34,
+          "ms": 38651,
+          "ollama": {
+            "totalMs": 38409,
+            "loadMs": 10,
+            "promptEvalMs": 132,
+            "evalMs": 3536,
+            "promptEvalCount": 915,
+            "evalCount": 34
+          }
+        },
+        {
+          "id": "q-09",
+          "refused": false,
+          "inputTokens": 1412,
+          "outputTokens": 21,
+          "ms": 64627,
+          "ollama": {
+            "totalMs": 64499,
+            "loadMs": 15,
+            "promptEvalMs": 152,
+            "evalMs": 2301,
+            "promptEvalCount": 1412,
+            "evalCount": 21
+          }
+        },
+        {
+          "id": "q-10",
+          "refused": false,
+          "inputTokens": 1102,
+          "outputTokens": 51,
+          "ms": 113378,
+          "ollama": {
+            "totalMs": 113306,
+            "loadMs": 15,
+            "promptEvalMs": 144,
+            "evalMs": 5744,
+            "promptEvalCount": 1102,
+            "evalCount": 51
+          }
+        },
+        {
+          "id": "q-11",
+          "refused": false,
+          "inputTokens": 1113,
+          "outputTokens": 139,
+          "ms": 116156,
+          "ollama": {
+            "totalMs": 116044,
+            "loadMs": 14,
+            "promptEvalMs": 140,
+            "evalMs": 15407,
+            "promptEvalCount": 1113,
+            "evalCount": 139
+          }
+        },
+        {
+          "id": "q-12",
+          "refused": false,
+          "inputTokens": 1392,
+          "outputTokens": 270,
+          "ms": 143845,
+          "ollama": {
+            "totalMs": 143724,
+            "loadMs": 14,
+            "promptEvalMs": 112,
+            "evalMs": 31168,
+            "promptEvalCount": 1392,
+            "evalCount": 270
+          }
+        },
+        {
+          "id": "q-13",
+          "refused": false,
+          "inputTokens": 1005,
+          "outputTokens": 171,
+          "ms": 158959,
+          "ollama": {
+            "totalMs": 158861,
+            "loadMs": 13,
+            "promptEvalMs": 105,
+            "evalMs": 18668,
+            "promptEvalCount": 1005,
+            "evalCount": 171
+          }
+        },
+        {
+          "id": "q-14",
+          "refused": false,
+          "inputTokens": 1063,
+          "outputTokens": 231,
+          "ms": 171956,
+          "ollama": {
+            "totalMs": 171825,
+            "loadMs": 11,
+            "promptEvalMs": 110,
+            "evalMs": 24967,
+            "promptEvalCount": 1063,
+            "evalCount": 231
+          }
+        },
+        {
+          "id": "q-15",
+          "refused": false,
+          "inputTokens": 880,
+          "outputTokens": 102,
+          "ms": 179196,
+          "ollama": {
+            "totalMs": 179119,
+            "loadMs": 13,
+            "promptEvalMs": 105,
+            "evalMs": 10768,
+            "promptEvalCount": 880,
+            "evalCount": 102
+          }
+        },
+        {
+          "id": "q-16",
+          "refused": true,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "ms": 97,
+          "ollama": null
+        },
+        {
+          "id": "q-17",
+          "refused": false,
+          "inputTokens": 1354,
+          "outputTokens": 4,
+          "ms": 167790,
+          "ollama": {
+            "totalMs": 167669,
+            "loadMs": 14,
+            "promptEvalMs": 114,
+            "evalMs": 335,
+            "promptEvalCount": 1354,
+            "evalCount": 4
+          }
+        },
+        {
+          "id": "q-18",
+          "refused": false,
+          "inputTokens": 1272,
+          "outputTokens": 55,
+          "ms": 171548,
+          "ollama": {
+            "totalMs": 171452,
+            "loadMs": 12,
+            "promptEvalMs": 111,
+            "evalMs": 6019,
+            "promptEvalCount": 1272,
+            "evalCount": 55
+          }
+        },
+        {
+          "id": "q-19",
+          "refused": true,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "ms": 59,
+          "ollama": null
+        },
+        {
+          "id": "q-20",
+          "refused": true,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "ms": 90,
+          "ollama": null
+        },
+        {
+          "id": "q-21",
+          "refused": true,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "ms": 95,
+          "ollama": null
+        },
+        {
+          "id": "q-22",
+          "refused": true,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "ms": 101,
+          "ollama": null
+        }
+      ]
+    },
+    {
+      "runAt": "2026-11-19T22:44:14.257Z",
+      "model": "qwen2.5-coder:7b (Ollama /api/chat)",
+      "budget": {
+        "maxBranches": 8,
+        "maxTokens": 50000,
+        "maxWallMs": 1200000
+      },
+      "wallMs": 378342,
+      "sumBranchMs": 2633761,
+      "inputTokens": 19964,
+      "outputTokens": 1801,
+      "costUsd": 0,
+      "ollama": {
+        "sumTotalMs": 2628781,
+        "sumLoadMs": 272,
+        "sumPromptEvalCount": 19964,
+        "sumEvalCount": 1801
+      },
+      "done": 22,
+      "refused": 5,
+      "failed": [],
+      "stoppedEarly": false,
+      "branches": [
+        {
+          "id": "q-01",
+          "refused": false,
+          "inputTokens": 1270,
+          "outputTokens": 31,
+          "ms": 66336,
+          "ollama": {
+            "totalMs": 66131,
+            "loadMs": 15,
+            "promptEvalMs": 125,
+            "evalMs": 3405,
+            "promptEvalCount": 1270,
+            "evalCount": 31
+          }
+        },
+        {
+          "id": "q-02",
+          "refused": false,
+          "inputTokens": 1214,
+          "outputTokens": 37,
+          "ms": 70526,
+          "ollama": {
+            "totalMs": 70269,
+            "loadMs": 16,
+            "promptEvalMs": 137,
+            "evalMs": 4026,
+            "promptEvalCount": 1214,
+            "evalCount": 37
+          }
+        },
+        {
+          "id": "q-03",
+          "refused": false,
+          "inputTokens": 1162,
+          "outputTokens": 33,
+          "ms": 84623,
+          "ollama": {
+            "totalMs": 84240,
+            "loadMs": 15,
+            "promptEvalMs": 127,
+            "evalMs": 3548,
+            "promptEvalCount": 1162,
+            "evalCount": 33
+          }
+        },
+        {
+          "id": "q-04",
+          "refused": false,
+          "inputTokens": 1186,
+          "outputTokens": 98,
+          "ms": 95503,
+          "ollama": {
+            "totalMs": 95054,
+            "loadMs": 23,
+            "promptEvalMs": 134,
+            "evalMs": 10698,
+            "promptEvalCount": 1186,
+            "evalCount": 98
+          }
+        },
+        {
+          "id": "q-05",
+          "refused": false,
+          "inputTokens": 1090,
+          "outputTokens": 92,
+          "ms": 80899,
+          "ollama": {
+            "totalMs": 80580,
+            "loadMs": 14,
+            "promptEvalMs": 132,
+            "evalMs": 10194,
+            "promptEvalCount": 1090,
+            "evalCount": 92
+          }
+        },
+        {
+          "id": "q-06",
+          "refused": false,
+          "inputTokens": 1245,
+          "outputTokens": 36,
+          "ms": 99598,
+          "ollama": {
+            "totalMs": 99038,
+            "loadMs": 39,
+            "promptEvalMs": 133,
+            "evalMs": 3906,
+            "promptEvalCount": 1245,
+            "evalCount": 36
+          }
+        },
+        {
+          "id": "q-07",
+          "refused": false,
+          "inputTokens": 1289,
+          "outputTokens": 122,
+          "ms": 113604,
+          "ollama": {
+            "totalMs": 112971,
+            "loadMs": 11,
+            "promptEvalMs": 138,
+            "evalMs": 13816,
+            "promptEvalCount": 1289,
+            "evalCount": 122
+          }
+        },
+        {
+          "id": "q-08",
+          "refused": false,
+          "inputTokens": 915,
+          "outputTokens": 54,
+          "ms": 119808,
+          "ollama": {
+            "totalMs": 119095,
+            "loadMs": 13,
+            "promptEvalMs": 132,
+            "evalMs": 6025,
+            "promptEvalCount": 915,
+            "evalCount": 54
+          }
+        },
+        {
+          "id": "q-09",
+          "refused": false,
+          "inputTokens": 1412,
+          "outputTokens": 22,
+          "ms": 170515,
+          "ollama": {
+            "totalMs": 170394,
+            "loadMs": 13,
+            "promptEvalMs": 114,
+            "evalMs": 2397,
+            "promptEvalCount": 1412,
+            "evalCount": 22
+          }
+        },
+        {
+          "id": "q-10",
+          "refused": false,
+          "inputTokens": 1102,
+          "outputTokens": 36,
+          "ms": 170400,
+          "ollama": {
+            "totalMs": 170317,
+            "loadMs": 14,
+            "promptEvalMs": 137,
+            "evalMs": 3892,
+            "promptEvalCount": 1102,
+            "evalCount": 36
+          }
+        },
+        {
+          "id": "q-11",
+          "refused": false,
+          "inputTokens": 1113,
+          "outputTokens": 190,
+          "ms": 181384,
+          "ollama": {
+            "totalMs": 181303,
+            "loadMs": 13,
+            "promptEvalMs": 133,
+            "evalMs": 21175,
+            "promptEvalCount": 1113,
+            "evalCount": 190
+          }
+        },
+        {
+          "id": "q-12",
+          "refused": false,
+          "inputTokens": 1392,
+          "outputTokens": 409,
+          "ms": 223717,
+          "ollama": {
+            "totalMs": 223605,
+            "loadMs": 15,
+            "promptEvalMs": 111,
+            "evalMs": 45893,
+            "promptEvalCount": 1392,
+            "evalCount": 409
+          }
+        },
+        {
+          "id": "q-13",
+          "refused": false,
+          "inputTokens": 1005,
+          "outputTokens": 254,
+          "ms": 240636,
+          "ollama": {
+            "totalMs": 240516,
+            "loadMs": 16,
+            "promptEvalMs": 108,
+            "evalMs": 27642,
+            "promptEvalCount": 1005,
+            "evalCount": 254
+          }
+        },
+        {
+          "id": "q-14",
+          "refused": false,
+          "inputTokens": 1063,
+          "outputTokens": 236,
+          "ms": 262377,
+          "ollama": {
+            "totalMs": 262251,
+            "loadMs": 14,
+            "promptEvalMs": 111,
+            "evalMs": 25674,
+            "promptEvalCount": 1063,
+            "evalCount": 236
+          }
+        },
+        {
+          "id": "q-15",
+          "refused": false,
+          "inputTokens": 880,
+          "outputTokens": 99,
+          "ms": 258860,
+          "ollama": {
+            "totalMs": 258763,
+            "loadMs": 15,
+            "promptEvalMs": 108,
+            "evalMs": 10343,
+            "promptEvalCount": 880,
+            "evalCount": 99
+          }
+        },
+        {
+          "id": "q-16",
+          "refused": true,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "ms": 114,
+          "ollama": null
+        },
+        {
+          "id": "q-17",
+          "refused": false,
+          "inputTokens": 1354,
+          "outputTokens": 4,
+          "ms": 253056,
+          "ollama": {
+            "totalMs": 252903,
+            "loadMs": 13,
+            "promptEvalMs": 113,
+            "evalMs": 354,
+            "promptEvalCount": 1354,
+            "evalCount": 4
+          }
+        },
+        {
+          "id": "q-18",
+          "refused": false,
+          "inputTokens": 1272,
+          "outputTokens": 48,
+          "ms": 141490,
+          "ollama": {
+            "totalMs": 141351,
+            "loadMs": 13,
+            "promptEvalMs": 108,
+            "evalMs": 5184,
+            "promptEvalCount": 1272,
+            "evalCount": 48
+          }
+        },
+        {
+          "id": "q-19",
+          "refused": true,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "ms": 58,
+          "ollama": null
+        },
+        {
+          "id": "q-20",
+          "refused": true,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "ms": 88,
+          "ollama": null
+        },
+        {
+          "id": "q-21",
+          "refused": true,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "ms": 80,
+          "ollama": null
+        },
+        {
+          "id": "q-22",
+          "refused": true,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "ms": 89,
+          "ollama": null
+        }
+      ]
+    },
+    {
+      "runAt": "2026-11-19T22:51:24.423Z",
+      "model": "qwen2.5-coder:7b (Ollama /api/chat)",
+      "budget": {
+        "maxBranches": 1,
+        "maxTokens": 50000,
+        "maxWallMs": 1200000
+      },
+      "wallMs": 173862,
+      "sumBranchMs": 173858,
+      "inputTokens": 19964,
+      "outputTokens": 1500,
+      "costUsd": 0,
+      "ollama": {
+        "sumTotalMs": 170102,
+        "sumLoadMs": 159,
+        "sumPromptEvalCount": 19964,
+        "sumEvalCount": 1500
+      },
+      "done": 22,
+      "refused": 5,
+      "failed": [],
+      "stoppedEarly": false,
+      "branches": [
+        {
+          "id": "q-01",
+          "refused": false,
+          "inputTokens": 1270,
+          "outputTokens": 33,
+          "ms": 8464,
+          "ollama": {
+            "totalMs": 6203,
+            "loadMs": 16,
+            "promptEvalMs": 1732,
+            "evalMs": 3884,
+            "promptEvalCount": 1270,
+            "evalCount": 33
+          }
+        },
+        {
+          "id": "q-02",
+          "refused": false,
+          "inputTokens": 1214,
+          "outputTokens": 43,
+          "ms": 5005,
+          "ollama": {
+            "totalMs": 4899,
+            "loadMs": 9,
+            "promptEvalMs": 118,
+            "evalMs": 4418,
+            "promptEvalCount": 1214,
+            "evalCount": 43
+          }
+        },
+        {
+          "id": "q-03",
+          "refused": false,
+          "inputTokens": 1162,
+          "outputTokens": 95,
+          "ms": 10342,
+          "ollama": {
+            "totalMs": 10289,
+            "loadMs": 9,
+            "promptEvalMs": 108,
+            "evalMs": 9840,
+            "promptEvalCount": 1162,
+            "evalCount": 95
+          }
+        },
+        {
+          "id": "q-04",
+          "refused": false,
+          "inputTokens": 1186,
+          "outputTokens": 109,
+          "ms": 11708,
+          "ollama": {
+            "totalMs": 11656,
+            "loadMs": 7,
+            "promptEvalMs": 108,
+            "evalMs": 11164,
+            "promptEvalCount": 1186,
+            "evalCount": 109
+          }
+        },
+        {
+          "id": "q-05",
+          "refused": false,
+          "inputTokens": 1090,
+          "outputTokens": 103,
+          "ms": 11186,
+          "ollama": {
+            "totalMs": 11134,
+            "loadMs": 10,
+            "promptEvalMs": 116,
+            "evalMs": 10720,
+            "promptEvalCount": 1090,
+            "evalCount": 103
+          }
+        },
+        {
+          "id": "q-06",
+          "refused": false,
+          "inputTokens": 1245,
+          "outputTokens": 35,
+          "ms": 4171,
+          "ollama": {
+            "totalMs": 4093,
+            "loadMs": 8,
+            "promptEvalMs": 110,
+            "evalMs": 3622,
+            "promptEvalCount": 1245,
+            "evalCount": 35
+          }
+        },
+        {
+          "id": "q-07",
+          "refused": false,
+          "inputTokens": 1289,
+          "outputTokens": 159,
+          "ms": 17468,
+          "ollama": {
+            "totalMs": 17414,
+            "loadMs": 8,
+            "promptEvalMs": 118,
+            "evalMs": 17097,
+            "promptEvalCount": 1289,
+            "evalCount": 159
+          }
+        },
+        {
+          "id": "q-08",
+          "refused": false,
+          "inputTokens": 915,
+          "outputTokens": 62,
+          "ms": 6703,
+          "ollama": {
+            "totalMs": 6644,
+            "loadMs": 8,
+            "promptEvalMs": 105,
+            "evalMs": 6305,
+            "promptEvalCount": 915,
+            "evalCount": 62
+          }
+        },
+        {
+          "id": "q-09",
+          "refused": false,
+          "inputTokens": 1412,
+          "outputTokens": 22,
+          "ms": 2708,
+          "ollama": {
+            "totalMs": 2639,
+            "loadMs": 11,
+            "promptEvalMs": 111,
+            "evalMs": 2339,
+            "promptEvalCount": 1412,
+            "evalCount": 22
+          }
+        },
+        {
+          "id": "q-10",
+          "refused": false,
+          "inputTokens": 1102,
+          "outputTokens": 51,
+          "ms": 5991,
+          "ollama": {
+            "totalMs": 5935,
+            "loadMs": 9,
+            "promptEvalMs": 129,
+            "evalMs": 5498,
+            "promptEvalCount": 1102,
+            "evalCount": 51
+          }
+        },
+        {
+          "id": "q-11",
+          "refused": false,
+          "inputTokens": 1113,
+          "outputTokens": 164,
+          "ms": 18229,
+          "ollama": {
+            "totalMs": 18138,
+            "loadMs": 10,
+            "promptEvalMs": 120,
+            "evalMs": 17872,
+            "promptEvalCount": 1113,
+            "evalCount": 164
+          }
+        },
+        {
+          "id": "q-12",
+          "refused": false,
+          "inputTokens": 1392,
+          "outputTokens": 275,
+          "ms": 31735,
+          "ollama": {
+            "totalMs": 31645,
+            "loadMs": 8,
+            "promptEvalMs": 119,
+            "evalMs": 31283,
+            "promptEvalCount": 1392,
+            "evalCount": 275
+          }
+        },
+        {
+          "id": "q-13",
+          "refused": false,
+          "inputTokens": 1005,
+          "outputTokens": 133,
+          "ms": 15094,
+          "ollama": {
+            "totalMs": 15007,
+            "loadMs": 10,
+            "promptEvalMs": 120,
+            "evalMs": 14735,
+            "promptEvalCount": 1005,
+            "evalCount": 133
+          }
+        },
+        {
+          "id": "q-14",
+          "refused": false,
+          "inputTokens": 1063,
+          "outputTokens": 80,
+          "ms": 9175,
+          "ollama": {
+            "totalMs": 9064,
+            "loadMs": 9,
+            "promptEvalMs": 122,
+            "evalMs": 8816,
+            "promptEvalCount": 1063,
+            "evalCount": 80
+          }
+        },
+        {
+          "id": "q-15",
+          "refused": false,
+          "inputTokens": 880,
+          "outputTokens": 93,
+          "ms": 10365,
+          "ollama": {
+            "totalMs": 10293,
+            "loadMs": 10,
+            "promptEvalMs": 125,
+            "evalMs": 10044,
+            "promptEvalCount": 880,
+            "evalCount": 93
+          }
+        },
+        {
+          "id": "q-16",
+          "refused": true,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "ms": 88,
+          "ollama": null
+        },
+        {
+          "id": "q-17",
+          "refused": false,
+          "inputTokens": 1354,
+          "outputTokens": 4,
+          "ms": 668,
+          "ollama": {
+            "totalMs": 583,
+            "loadMs": 8,
+            "promptEvalMs": 120,
+            "evalMs": 344,
+            "promptEvalCount": 1354,
+            "evalCount": 4
+          }
+        },
+        {
+          "id": "q-18",
+          "refused": false,
+          "inputTokens": 1272,
+          "outputTokens": 39,
+          "ms": 4558,
+          "ollama": {
+            "totalMs": 4466,
+            "loadMs": 9,
+            "promptEvalMs": 121,
+            "evalMs": 4273,
+            "promptEvalCount": 1272,
+            "evalCount": 39
+          }
+        },
+        {
+          "id": "q-19",
+          "refused": true,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "ms": 49,
+          "ollama": null
+        },
+        {
+          "id": "q-20",
+          "refused": true,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "ms": 48,
+          "ollama": null
+        },
+        {
+          "id": "q-21",
+          "refused": true,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "ms": 52,
+          "ollama": null
+        },
+        {
+          "id": "q-22",
+          "refused": true,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "ms": 51,
+          "ollama": null
+        }
+      ]
+    },
+    {
+      "runAt": "2026-11-19T22:54:14.550Z",
+      "model": "qwen2.5-coder:7b (Ollama /api/chat)",
+      "budget": {
+        "maxBranches": 4,
+        "maxTokens": 50000,
+        "maxWallMs": 1200000
+      },
+      "wallMs": 161456,
+      "sumBranchMs": 564862,
+      "inputTokens": 19964,
+      "outputTokens": 1432,
+      "costUsd": 0,
+      "ollama": {
+        "sumTotalMs": 562453,
+        "sumLoadMs": 213,
+        "sumPromptEvalCount": 19964,
+        "sumEvalCount": 1432
+      },
+      "done": 22,
+      "refused": 5,
+      "failed": [],
+      "stoppedEarly": false,
+      "branches": [
+        {
+          "id": "q-01",
+          "refused": false,
+          "inputTokens": 1270,
+          "outputTokens": 53,
+          "ms": 6066,
+          "ollama": {
+            "totalMs": 5925,
+            "loadMs": 10,
+            "promptEvalMs": 125,
+            "evalMs": 5701,
+            "promptEvalCount": 1270,
+            "evalCount": 53
+          }
+        },
+        {
+          "id": "q-02",
+          "refused": false,
+          "inputTokens": 1214,
+          "outputTokens": 32,
+          "ms": 9645,
+          "ollama": {
+            "totalMs": 9487,
+            "loadMs": 9,
+            "promptEvalMs": 132,
+            "evalMs": 3401,
+            "promptEvalCount": 1214,
+            "evalCount": 32
+          }
+        },
+        {
+          "id": "q-03",
+          "refused": false,
+          "inputTokens": 1162,
+          "outputTokens": 59,
+          "ms": 16164,
+          "ollama": {
+            "totalMs": 15990,
+            "loadMs": 11,
+            "promptEvalMs": 128,
+            "evalMs": 6333,
+            "promptEvalCount": 1162,
+            "evalCount": 59
+          }
+        },
+        {
+          "id": "q-04",
+          "refused": false,
+          "inputTokens": 1186,
+          "outputTokens": 109,
+          "ms": 28309,
+          "ollama": {
+            "totalMs": 28105,
+            "loadMs": 10,
+            "promptEvalMs": 131,
+            "evalMs": 11958,
+            "promptEvalCount": 1186,
+            "evalCount": 109
+          }
+        },
+        {
+          "id": "q-05",
+          "refused": false,
+          "inputTokens": 1090,
+          "outputTokens": 101,
+          "ms": 33556,
+          "ollama": {
+            "totalMs": 33449,
+            "loadMs": 11,
+            "promptEvalMs": 131,
+            "evalMs": 11116,
+            "promptEvalCount": 1090,
+            "evalCount": 101
+          }
+        },
+        {
+          "id": "q-06",
+          "refused": false,
+          "inputTokens": 1245,
+          "outputTokens": 37,
+          "ms": 34121,
+          "ollama": {
+            "totalMs": 34029,
+            "loadMs": 12,
+            "promptEvalMs": 124,
+            "evalMs": 3970,
+            "promptEvalCount": 1245,
+            "evalCount": 37
+          }
+        },
+        {
+          "id": "q-07",
+          "refused": false,
+          "inputTokens": 1289,
+          "outputTokens": 54,
+          "ms": 33854,
+          "ollama": {
+            "totalMs": 33776,
+            "loadMs": 14,
+            "promptEvalMs": 127,
+            "evalMs": 6061,
+            "promptEvalCount": 1289,
+            "evalCount": 54
+          }
+        },
+        {
+          "id": "q-08",
+          "refused": false,
+          "inputTokens": 915,
+          "outputTokens": 35,
+          "ms": 25578,
+          "ollama": {
+            "totalMs": 25493,
+            "loadMs": 14,
+            "promptEvalMs": 132,
+            "evalMs": 3686,
+            "promptEvalCount": 915,
+            "evalCount": 35
+          }
+        },
+        {
+          "id": "q-09",
+          "refused": false,
+          "inputTokens": 1412,
+          "outputTokens": 22,
+          "ms": 16869,
+          "ollama": {
+            "totalMs": 16797,
+            "loadMs": 12,
+            "promptEvalMs": 142,
+            "evalMs": 2395,
+            "promptEvalCount": 1412,
+            "evalCount": 22
+          }
+        },
+        {
+          "id": "q-10",
+          "refused": false,
+          "inputTokens": 1102,
+          "outputTokens": 35,
+          "ms": 16698,
+          "ollama": {
+            "totalMs": 16626,
+            "loadMs": 11,
+            "promptEvalMs": 133,
+            "evalMs": 3788,
+            "promptEvalCount": 1102,
+            "evalCount": 35
+          }
+        },
+        {
+          "id": "q-11",
+          "refused": false,
+          "inputTokens": 1113,
+          "outputTokens": 142,
+          "ms": 26309,
+          "ollama": {
+            "totalMs": 26202,
+            "loadMs": 16,
+            "promptEvalMs": 129,
+            "evalMs": 15673,
+            "promptEvalCount": 1113,
+            "evalCount": 142
+          }
+        },
+        {
+          "id": "q-12",
+          "refused": false,
+          "inputTokens": 1392,
+          "outputTokens": 118,
+          "ms": 35961,
+          "ollama": {
+            "totalMs": 35837,
+            "loadMs": 15,
+            "promptEvalMs": 130,
+            "evalMs": 13319,
+            "promptEvalCount": 1392,
+            "evalCount": 118
+          }
+        },
+        {
+          "id": "q-13",
+          "refused": false,
+          "inputTokens": 1005,
+          "outputTokens": 227,
+          "ms": 58896,
+          "ollama": {
+            "totalMs": 58781,
+            "loadMs": 12,
+            "promptEvalMs": 141,
+            "evalMs": 25333,
+            "promptEvalCount": 1005,
+            "evalCount": 227
+          }
+        },
+        {
+          "id": "q-14",
+          "refused": false,
+          "inputTokens": 1063,
+          "outputTokens": 127,
+          "ms": 69059,
+          "ollama": {
+            "totalMs": 68943,
+            "loadMs": 13,
+            "promptEvalMs": 134,
+            "evalMs": 13952,
+            "promptEvalCount": 1063,
+            "evalCount": 127
+          }
+        },
+        {
+          "id": "q-15",
+          "refused": false,
+          "inputTokens": 880,
+          "outputTokens": 63,
+          "ms": 60190,
+          "ollama": {
+            "totalMs": 60111,
+            "loadMs": 13,
+            "promptEvalMs": 132,
+            "evalMs": 6815,
+            "promptEvalCount": 880,
+            "evalCount": 63
+          }
+        },
+        {
+          "id": "q-16",
+          "refused": true,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "ms": 119,
+          "ollama": null
+        },
+        {
+          "id": "q-17",
+          "refused": false,
+          "inputTokens": 1354,
+          "outputTokens": 4,
+          "ms": 47059,
+          "ollama": {
+            "totalMs": 46944,
+            "loadMs": 17,
+            "promptEvalMs": 113,
+            "evalMs": 343,
+            "promptEvalCount": 1354,
+            "evalCount": 4
+          }
+        },
+        {
+          "id": "q-18",
+          "refused": false,
+          "inputTokens": 1272,
+          "outputTokens": 214,
+          "ms": 46067,
+          "ollama": {
+            "totalMs": 45958,
+            "loadMs": 13,
+            "promptEvalMs": 113,
+            "evalMs": 24258,
+            "promptEvalCount": 1272,
+            "evalCount": 214
+          }
+        },
+        {
+          "id": "q-19",
+          "refused": true,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "ms": 72,
+          "ollama": null
+        },
+        {
+          "id": "q-20",
+          "refused": true,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "ms": 90,
+          "ollama": null
+        },
+        {
+          "id": "q-21",
+          "refused": true,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "ms": 78,
+          "ollama": null
+        },
+        {
+          "id": "q-22",
+          "refused": true,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "ms": 102,
+          "ollama": null
+        }
+      ]
+    }
+  ]
+}
