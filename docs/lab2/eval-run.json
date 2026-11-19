@@ -43,9 +43,9 @@
       "inputTokens": 1270,
       "outputTokens": 21,
       "latencyMs": 3647,
-      "verdict": null,
-      "baselineVerdict": null,
-      "citationCorrect": null
+      "verdict": "correct",
+      "baselineVerdict": "wrong",
+      "citationCorrect": false
     },
     {
       "id": "q-02",
@@ -86,9 +86,9 @@
       "inputTokens": 1214,
       "outputTokens": 21,
       "latencyMs": 3640,
-      "verdict": null,
-      "baselineVerdict": null,
-      "citationCorrect": null
+      "verdict": "correct",
+      "baselineVerdict": "correct",
+      "citationCorrect": false
     },
     {
       "id": "q-03",
@@ -131,9 +131,9 @@
       "inputTokens": 1162,
       "outputTokens": 132,
       "latencyMs": 68173,
-      "verdict": null,
-      "baselineVerdict": null,
-      "citationCorrect": null
+      "verdict": "correct",
+      "baselineVerdict": "wrong",
+      "citationCorrect": true
     },
     {
       "id": "q-04",
@@ -174,9 +174,9 @@
       "inputTokens": 1186,
       "outputTokens": 96,
       "latencyMs": 63965,
-      "verdict": null,
-      "baselineVerdict": null,
-      "citationCorrect": null
+      "verdict": "correct",
+      "baselineVerdict": "wrong",
+      "citationCorrect": false
     },
     {
       "id": "q-05",
@@ -217,9 +217,9 @@
       "inputTokens": 1090,
       "outputTokens": 132,
       "latencyMs": 63813,
-      "verdict": null,
-      "baselineVerdict": null,
-      "citationCorrect": null
+      "verdict": "correct",
+      "baselineVerdict": "partial",
+      "citationCorrect": false
     },
     {
       "id": "q-06",
@@ -262,9 +262,9 @@
       "inputTokens": 1245,
       "outputTokens": 37,
       "latencyMs": 56875,
-      "verdict": null,
-      "baselineVerdict": null,
-      "citationCorrect": null
+      "verdict": "correct",
+      "baselineVerdict": "correct",
+      "citationCorrect": true
     },
     {
       "id": "q-07",
@@ -307,9 +307,9 @@
       "inputTokens": 1289,
       "outputTokens": 67,
       "latencyMs": 62940,
-      "verdict": null,
-      "baselineVerdict": null,
-      "citationCorrect": null
+      "verdict": "correct",
+      "baselineVerdict": "wrong",
+      "citationCorrect": true
     },
     {
       "id": "q-08",
@@ -352,9 +352,9 @@
       "inputTokens": 915,
       "outputTokens": 69,
       "latencyMs": 45748,
-      "verdict": null,
-      "baselineVerdict": null,
-      "citationCorrect": null
+      "verdict": "correct",
+      "baselineVerdict": "wrong",
+      "citationCorrect": true
     },
     {
       "id": "q-09",
@@ -397,9 +397,9 @@
       "inputTokens": 1412,
       "outputTokens": 33,
       "latencyMs": 64402,
-      "verdict": null,
-      "baselineVerdict": null,
-      "citationCorrect": null
+      "verdict": "correct",
+      "baselineVerdict": "wrong",
+      "citationCorrect": true
     },
     {
       "id": "q-10",
@@ -440,9 +440,9 @@
       "inputTokens": 1102,
       "outputTokens": 54,
       "latencyMs": 52200,
-      "verdict": null,
-      "baselineVerdict": null,
-      "citationCorrect": null
+      "verdict": "correct",
+      "baselineVerdict": "partial",
+      "citationCorrect": false
     },
     {
       "id": "q-11",
@@ -484,9 +484,9 @@
       "inputTokens": 1113,
       "outputTokens": 123,
       "latencyMs": 62285,
-      "verdict": null,
-      "baselineVerdict": null,
-      "citationCorrect": null
+      "verdict": "correct",
+      "baselineVerdict": "wrong",
+      "citationCorrect": false
     },
     {
       "id": "q-12",
@@ -528,9 +528,9 @@
       "inputTokens": 1392,
       "outputTokens": 294,
       "latencyMs": 67661,
-      "verdict": null,
-      "baselineVerdict": null,
-      "citationCorrect": null
+      "verdict": "wrong",
+      "baselineVerdict": "partial",
+      "citationCorrect": false
     },
     {
       "id": "q-13",
@@ -574,9 +574,9 @@
       "inputTokens": 1005,
       "outputTokens": 83,
       "latencyMs": 30992,
-      "verdict": null,
-      "baselineVerdict": null,
-      "citationCorrect": null
+      "verdict": "partial",
+      "baselineVerdict": "partial",
+      "citationCorrect": true
     },
     {
       "id": "q-14",
@@ -618,9 +618,9 @@
       "inputTokens": 1063,
       "outputTokens": 262,
       "latencyMs": 51405,
-      "verdict": null,
-      "baselineVerdict": null,
-      "citationCorrect": null
+      "verdict": "partial",
+      "baselineVerdict": "wrong",
+      "citationCorrect": false
     },
     {
       "id": "q-15",
@@ -662,9 +662,9 @@
       "inputTokens": 880,
       "outputTokens": 44,
       "latencyMs": 24809,
-      "verdict": null,
-      "baselineVerdict": null,
-      "citationCorrect": null
+      "verdict": "partial",
+      "baselineVerdict": "wrong",
+      "citationCorrect": false
     },
     {
       "id": "q-16",
@@ -706,9 +706,9 @@
       "inputTokens": 0,
       "outputTokens": 0,
       "latencyMs": 81,
-      "verdict": null,
-      "baselineVerdict": null,
-      "citationCorrect": null
+      "verdict": "refused",
+      "baselineVerdict": "wrong",
+      "citationCorrect": false
     },
     {
       "id": "q-17",
@@ -750,9 +750,9 @@
       "inputTokens": 1354,
       "outputTokens": 4,
       "latencyMs": 32859,
-      "verdict": null,
-      "baselineVerdict": null,
-      "citationCorrect": null
+      "verdict": "wrong",
+      "baselineVerdict": "wrong",
+      "citationCorrect": false
     },
     {
       "id": "q-18",
@@ -794,9 +794,9 @@
       "inputTokens": 1272,
       "outputTokens": 88,
       "latencyMs": 39853,
-      "verdict": null,
-      "baselineVerdict": null,
-      "citationCorrect": null
+      "verdict": "correct",
+      "baselineVerdict": "wrong",
+      "citationCorrect": false
     },
     {
       "id": "q-19",
@@ -835,8 +835,8 @@
       "inputTokens": 0,
       "outputTokens": 0,
       "latencyMs": 51,
-      "verdict": null,
-      "baselineVerdict": null,
+      "verdict": "refused",
+      "baselineVerdict": "wrong",
       "citationCorrect": null
     },
     {
@@ -876,8 +876,8 @@
       "inputTokens": 0,
       "outputTokens": 0,
       "latencyMs": 58,
-      "verdict": null,
-      "baselineVerdict": null,
+      "verdict": "refused",
+      "baselineVerdict": "refused",
       "citationCorrect": null
     },
     {
@@ -917,8 +917,8 @@
       "inputTokens": 0,
       "outputTokens": 0,
       "latencyMs": 55,
-      "verdict": null,
-      "baselineVerdict": null,
+      "verdict": "refused",
+      "baselineVerdict": "wrong",
       "citationCorrect": null
     },
     {
@@ -958,8 +958,8 @@
       "inputTokens": 0,
       "outputTokens": 0,
       "latencyMs": 66,
-      "verdict": null,
-      "baselineVerdict": null,
+      "verdict": "refused",
+      "baselineVerdict": "wrong",
       "citationCorrect": null
     }
   ]
